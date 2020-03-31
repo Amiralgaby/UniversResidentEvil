@@ -1,0 +1,5 @@
+Master-detail thème Resident Evil
+Notre master-detail se porte sur le thème de l’univers Resident Evil, cela peut être utile pour les personnes débutantes dans l’immense univers de Resident Evil.
+En effet, les utilisateurs des jeux peuvent ne pas connaître l’histoire derrière le jeu.
+Il est donc important pour eux de savoir le synopsis antérieur au jeu actuel vu que le premier jeu date de 1996 et qu’il y avait déjà un scénario bien avant.
+Notre application permettra de faire la lumière sur la série Resident Evil.

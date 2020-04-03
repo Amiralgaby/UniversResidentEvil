@@ -1,10 +1,10 @@
 ﻿#Contexte Master-detail thème Resident Evil
 
-Notre master-detail se porte sur le thème de l’univers Resident Evil, cela peut être utile pour les personnes débutantes dans l’immense univers de Resident Evil.
-En effet, les utilisateurs des jeux peuvent ne pas connaître l’histoire derrière le jeu.
-Il est donc important pour eux de savoir le synopsis antérieur au jeu actuel vu que le premier jeu date de 1996 et qu’il y avait déjà un scénario bien avant.
+Notre application est un master-details receuillant diverses infos de cet licence, cela peut être utile pour les personnes débutantes dans les immenses uinvers de leurs jeux.
+En effet, parfois les joueurs ne connaissent pas le scénario relié au jeu.
+Il est donc important pour eux de savoir le synopsis antérieur.
 Notre application permettra de faire la lumière sur la série Resident Evil.
-Ce projet ravira autant les experts de Resident Evil que les novices cherchant à s'instruire.
+Ce projet ravira autant les experts de Resident Evil à la recherche de précision que les novices cherchant à se plonger dans cet univers.
 
 ###Se retrouver dans l'histoire
 
@@ -13,10 +13,9 @@ Grâce à une frise, l'utilisateur pourra choisir par où commencer.
 
 ###Biographie complète des héros
 
-Chaque personnage doit être abordé et avoir une biographie complète.
-Répondant aux questions de base tel que où ? qui ? pourquoi ? comment ?
+Chaque personnage doit être abordé et avoir une biographie complète et répondra au question de base tel que où ? pourquoi ? comment ?
 
 ###Recherche par termes
 
 Grâce à une barre de recherche l'utilisateur peut trouver une page de détails associé au terme demandé.
-**Dans le cas où le terme n'existe pas :** il peut faire une requête par mail
+**Dans le cas où le terme n'existe pas :** il peut faire une requête par mail pour complété nos données.

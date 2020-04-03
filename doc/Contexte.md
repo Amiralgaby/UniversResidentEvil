@@ -4,6 +4,7 @@ Notre master-detail se porte sur le thème de l’univers Resident Evil, cela pe
 En effet, les utilisateurs des jeux peuvent ne pas connaître l’histoire derrière le jeu.
 Il est donc important pour eux de savoir le synopsis antérieur au jeu actuel vu que le premier jeu date de 1996 et qu’il y avait déjà un scénario bien avant.
 Notre application permettra de faire la lumière sur la série Resident Evil.
+Ce projet ravira autant les experts de Resident Evil que les novices cherchant à s'instruire.
 
 ###Se retrouver dans l'histoire
 

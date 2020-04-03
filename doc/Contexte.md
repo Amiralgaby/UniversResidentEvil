@@ -18,4 +18,4 @@ Répondant aux questions de base tel que où ? qui ? pourquoi ? comment ?
 ###Recherche par termes
 
 Grâce à une barre de recherche l'utilisateur peut trouver une page de détails associé au terme demandé.
-**Dans le cas où le termes n'existe pas :** il peut faire une requête par mail 
+**Dans le cas où le terme n'existe pas :** il peut faire une requête par mail

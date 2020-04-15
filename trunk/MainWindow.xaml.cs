@@ -28,5 +28,10 @@ namespace UniversRE
         private void ToggleButton_Click(object sender, RoutedEventArgs e)
         {
         }
+
+        private void Recherche_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

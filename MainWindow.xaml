@@ -19,37 +19,34 @@
     </Window.Resources>
     <DockPanel>
         <Menu DockPanel.Dock="Top" >
-            <MenuItem Header="Fichier" />
-            <MenuItem Header="Options" />
+            <MenuItem Header="Accueil" >
+            </MenuItem>
+            <MenuItem Header="Options" >
+                <MenuItem Header="Importer" />
+                <MenuItem Header="Sauvegarder" />
+            </MenuItem>
         </Menu>
-        <DockPanel DockPanel.Dock="Top">
-            <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Background="Bisque">
-                <Button Content="Histoire" Padding="4" Style="{StaticResource StyleWrapPanel}" />
-                <Button Content="Personnages" Padding="4" Style="{StaticResource StyleWrapPanel}" />
-                <Button Content="Créatures" Padding="4" Style="{StaticResource StyleWrapPanel}" />
-                <Button Content="Créature" Padding="4" Style="{StaticResource StyleWrapPanel}" />
+        <DockPanel DockPanel.Dock="Top" Background="White" x:Name="My_dock_pan">
+            <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Background="Beige">
+                <Button Content="Histoire" Style="{StaticResource StyleWrapPanel}"/>
+                <Button Content="Personnages" Style="{StaticResource StyleWrapPanel}" />
+                <Button Content="Créatures" Style="{StaticResource StyleWrapPanel}" />
+                <Button Content="Créature" Style="{StaticResource StyleWrapPanel}" />
                 <Image Source="img/loupe-icon.jpg" MaxHeight="40" MaxWidth="40" />
-                <TextBox x:Name="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="32" Text="Recherche" FontSize="20" BorderBrush="Aquamarine" />
+                <TextBox x:Name="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="32" FontSize="20" BorderBrush="Aquamarine" TextChanged="Recherche_TextChanged" />
             </WrapPanel>
-            <StackPanel MaxWidth="700">
+            <StackPanel>
                 <DockPanel>
-                <DockPanel VerticalAlignment="Center" Margin="0 , 20 , 0 , 0" Background="Brown" DockPanel.Dock="Top">
-                    <TextBlock Text="Valeur du personnage"  FontSize="18" HorizontalAlignment="Right" Padding="0 , 0 , 60 , 0" FontWeight="SemiBold"/>
-                </DockPanel>
-                <DockPanel Margin="2">
-                    <WrapPanel Orientation="Vertical" DockPanel.Dock="Left" HorizontalAlignment="Center" Background="Violet" >
-                        <Image Source="img/espionnage.jpg" Width="200"  Height="200"/>
-                        <TextBlock HorizontalAlignment="Stretch" Background="Black" TextWrapping="Wrap" MaxWidth="200" >
-                            <Run Text="C'est qqn de TF2 ça !" FontWeight="DemiBold" FontSize="18" Foreground="BlanchedAlmond"/>
-                            <Run Text="[PlaceHolder] Mais ça tu l'a déjà dit !" Foreground="BlanchedAlmond" FontSize="15"/>
-                        </TextBlock>
-                    </WrapPanel>
-                    <TextBlock Background="DarkSalmon">
-                        <Run Text="La meilleure app ever" FontSize="20" FontWeight="Bold"/>
-                        <LineBreak Foreground="#FFF71616"></LineBreak>
-                        <Run Text="IL était une fois quelqu'un... et blablabla" />
-                    </TextBlock>
-                </DockPanel>
+                    <ListBox HorizontalContentAlignment="Center">
+                        <local:MyUc1/>
+                        <local:MyUc1/>
+                        <local:MyUc1/>
+                        <local:MyUc1/>
+                        <local:MyUc1/>
+                    </ListBox>
+                    <DockPanel>
+                        <local:MyUC2/>
+                    </DockPanel>
                 </DockPanel>
             </StackPanel>
         </DockPanel>

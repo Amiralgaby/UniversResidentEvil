@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,18 +14,13 @@ using System.Windows.Shapes;
 namespace UniversRE
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Logique d'interaction pour MyUC2.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MyUC2 : UserControl
     {
-        public MainWindow()
+        public MyUC2()
         {
             InitializeComponent();
-        }
-
-        private void Recherche_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
         }
     }
 }

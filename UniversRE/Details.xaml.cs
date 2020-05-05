@@ -14,11 +14,11 @@ using System.Windows.Shapes;
 namespace UniversRE
 {
     /// <summary>
-    /// Logique d'interaction pour MyUc1.xaml
+    /// Logique d'interaction pour MyUC2.xaml
     /// </summary>
-    public partial class MyUc1 : UserControl
+    public partial class Details : UserControl
     {
-        public MyUc1()
+        public Details()
         {
             InitializeComponent();
         }

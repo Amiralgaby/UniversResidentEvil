@@ -36,16 +36,15 @@
                 <TextBox x:Name="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="32" FontSize="20" BorderBrush="Aquamarine" TextChanged="Recherche_TextChanged" />
             </WrapPanel>
             <StackPanel>
-                <DockPanel>
+                <DockPanel MinHeight="300">
                     <ListBox HorizontalContentAlignment="Center">
-                        <local:MyUc1/>
-                        <local:MyUc1/>
-                        <local:MyUc1/>
-                        <local:MyUc1/>
-                        <local:MyUc1/>
+                        <local:Miniature/>
+                        <local:Miniature/>
+                        <local:Miniature/>
+                        <local:Miniature/>
                     </ListBox>
                     <DockPanel>
-                        <local:MyUC2/>
+                        <local:Details/>
                     </DockPanel>
                 </DockPanel>
             </StackPanel>

@@ -14,9 +14,19 @@ namespace MyLib
             Description = description;
             Favoris = favoris;
         }
+
+        public void ModifierNom(string nom) => Nom = nom;
+        public void ModifierDescription(string description) => Description = description;
+        public void ModifierAttribut(string nom, string description, bool favoris)
+        {
+            Nom = nom;
+            Description = description;
+            Favoris = favoris;
+        }
+        public void BasculerFavoris() => Favoris = !Favoris;
         public string Nom{ get; private set; }
         public string Description{ get; private set; }
-        public Boolean Favoris { get; private set; }
+        public bool Favoris { get; private set; }
         public override string ToString()
         {
             return $"{Nom}\t {Favoris}\n{Description}";

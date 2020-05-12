@@ -29,7 +29,8 @@ namespace MyLib
         public bool Favoris { get; private set; }
         public override string ToString()
         {
-            return $"{Nom}\t {Favoris}\n{Description}";
+            if (Favoris) return $"{Nom} \'{Description}\' (Favoris)";
+            return $"{Nom} \'{Description}\'";
         }
     }
 }

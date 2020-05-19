@@ -4,17 +4,17 @@ using System.Text;
 
 namespace MyLib
 {
-    public class Creature :Element
+    public class Creature : Element
     {
-        public Creature(string nom, string description,string dangerosité) 
+        public Creature(string nom, string description,Dangerosité dangerosité) 
             : base(nom,description)
         {
             Dangerosité = dangerosité;
         }
-        public void Modifier(string dangerosité)
+        public void Modifier(Dangerosité dangerosité)
         {
             Dangerosité = dangerosité;
         }
-        public string Dangerosité { get; private set; }
+        public Dangerosité Dangerosité { get; private set; }
     }
 }

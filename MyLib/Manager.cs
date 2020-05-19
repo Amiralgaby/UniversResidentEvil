@@ -28,6 +28,6 @@ namespace MyLib
             }
         }
 
-        //Fonctions pour l'histoire (la liste d'événement)q
+        //Fonctions pour l'histoire (la liste d'événement)
     }
 }

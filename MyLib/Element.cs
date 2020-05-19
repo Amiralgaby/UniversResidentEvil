@@ -24,8 +24,29 @@ namespace MyLib
             Favoris = favoris;
         }
         public void BasculerFavoris() => Favoris = !Favoris;
-        public string Nom{ get; private set; }
-        public string Description{ get; private set; }
+        //public string Nom { get; private set; }
+        public string Nom{
+            get { return this.nom; }
+            private set
+            {
+                if (!((value??"inconnu").Equals("")))
+                    this.nom = value;
+                else
+                    this.nom = "sans nom";
+            }
+        }
+        private string nom;
+        public string Description {
+            get { return this.description; }
+            private set 
+            {
+                if (!((value ?? "inderterminée").Equals("")))
+                    this.description = value;
+                else
+                    this.description = "sans description";
+            }
+        }
+        private string description;
         public bool Favoris { get; private set; }
         public override string ToString()
         {

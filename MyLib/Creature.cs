@@ -11,10 +11,7 @@ namespace MyLib
         {
             Dangerosité = dangerosité;
         }
-        public void Modifier(Dangerosité dangerosité)
-        {
-            Dangerosité = dangerosité;
-        }
+        public void Modifier(Dangerosité dangerosité) => Dangerosité = dangerosité;
         public Dangerosité Dangerosité { get; private set; }
     }
 }

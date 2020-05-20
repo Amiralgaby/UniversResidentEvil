@@ -2,12 +2,10 @@
 
 namespace MyLib
 {
-    public class Element
+    public class Element : IEquatable<Element>
     {
         public Element(string nom, string description)
-            : this(nom,description,false)
-        {
-        }
+            : this(nom,description,false){}
         public Element(string nom, string description, Boolean favoris)
         {
             Nom = nom;
@@ -24,7 +22,6 @@ namespace MyLib
             Favoris = favoris;
         }
         public void BasculerFavoris() => Favoris = !Favoris;
-        //public string Nom { get; private set; }
         public string Nom{
             get { return this.nom; }
             private set
@@ -52,6 +49,24 @@ namespace MyLib
         {
             if (Favoris) return $"{Nom} \'{Description}\' (Favoris)";
             return $"{Nom} \'{Description}\'";
+        }
+
+        public bool Equals(Element other)
+        {
+            return Nom.Equals(other.Nom) && Description.Equals(other.Nom);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if (ReferenceEquals(obj, null)) return false;
+            if (ReferenceEquals(obj, this)) return true;
+            if (GetType() != obj.GetType()) return false;
+            return Equals(obj as Element);
+        }
+
+        public override int GetHashCode()
+        {
+            return Nom.GetHashCode();
         }
     }
 }

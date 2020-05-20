@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLib;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,8 +21,19 @@ namespace UniversRE
     /// </summary>
     public partial class MainWindow : Window
     {
+        public Manager Man { get; set; }
         public MainWindow()
         {
+            Man = new Manager();
+            Man.AjouterElement(new Element("Jean Bon", "L'homme le plus cool de l'univers"));
+            Man.AjouterElement(new Element("Moldu", "Truc", true));
+            Man.AjouterElement(new Element("Le dernier essai", "il n'a pas fait long feu", false));
+            Man.AjouterElement(new Personnage("Chaplin", "Charlie", "un génie"));
+            Man.AjouterElement(new Personnage("Tolvarld", "Linus", "un hacker"));
+            Man.AjouterElement(new Personnage("PlaceholderName", "PlaceHolderPrenom", "c'est a supprimer"));
+
+            
+            DataContext = this;
             InitializeComponent();
         }
 
@@ -29,5 +41,6 @@ namespace UniversRE
         {
 
         }
+        //public Manager man => (Application.Current as App).Manager;
     }
 }

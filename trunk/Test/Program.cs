@@ -30,11 +30,6 @@ namespace Test
             m.AjouterEvenementAHistoire(ev);
             m.AjouterEvenementAHistoire(ev1);
             m.AjouterEvenementAHistoire(ev2);
-
-            //Affichage
-            m.listerLesElement();
-            Console.WriteLine("@@@@@@@@@@@@@@@@@@");
-            m.listerHistoire();
         }
     }
 }

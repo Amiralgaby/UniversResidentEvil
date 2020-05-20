@@ -9,21 +9,18 @@ namespace MyLib
     public class Manager
     {
         public LinkedList<Evenement> Histoire = new LinkedList<Evenement>();
-        private static ObservableCollection<Element> observableCollection = new ObservableCollection<Element>();
-        private readonly ObservableCollection<Element> ListElements = observableCollection;
-        
-        //Fonction pour la liste d'éléments
-        public void AjouterElement(Element e) => ListElements.Add(e);
-        public void SupprimerElement(Element e) => ListElements.Remove(e);
-        public void ModifierElement(Element e, string nom, string description,bool favoris) => e.ModifierAttribut(nom, description, favoris);
-        public void listerLesElement()
+        private ObservableCollection<Element> mesElements = new ObservableCollection<Element>();
+
+        public ObservableCollection<Element> MesElements
         {
-            foreach (Element e in ListElements)
-            {
-                Console.WriteLine(e.ToString());
-                Console.WriteLine("***********");
-            }
+            get { return mesElements; }
+            set { mesElements = value; }
         }
+
+        //Fonction pour la liste d'éléments
+        public void AjouterElement(Element e) => MesElements.Add(e);
+        public void SupprimerElement(Element e) => MesElements.Remove(e);
+        public void ModifierElement(Element e, string nom, string description,bool favoris) => e.ModifierAttribut(nom, description, favoris);
 
         //Fonctions pour l'histoire (la liste d'événement)
         public void AjouterEvenementAHistoire(Evenement ev) => Histoire.AddLast(ev);
@@ -32,14 +29,6 @@ namespace MyLib
         {
             ev.ModifierLieu(lieu);
             ev.ModifierDate(date);
-        }
-        public void listerHistoire()
-        {
-            foreach(Evenement ev in Histoire)
-            {
-                Console.WriteLine(ev.ToString());
-                Console.WriteLine("************");
-            }
         }
     }
 }

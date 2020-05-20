@@ -37,11 +37,14 @@
             </WrapPanel>
             <StackPanel>
                 <DockPanel MinHeight="300">
-                    <ListBox HorizontalContentAlignment="Center">
-                        <local:Miniature/>
-                        <local:Miniature/>
-                        <local:Miniature/>
-                        <local:Miniature/>
+                    <ListBox MinWidth="130" HorizontalContentAlignment="Center" x:Name="lesElements" ItemsSource="{Binding Man.MesElements}">
+                        <!--<ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <WrapPanel>
+                                    <TextBox Text="{Binding ElementName.Nom}"/>
+                                </WrapPanel>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>-->
                     </ListBox>
                     <DockPanel>
                         <local:Details/>

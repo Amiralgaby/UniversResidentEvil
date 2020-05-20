@@ -26,7 +26,7 @@ namespace MyLib
             get { return this.nom; }
             private set
             {
-                if (!((value??"inconnu").Equals("")))
+                if (string.IsNullOrWhiteSpace(nom))
                     this.nom = value;
                 else
                     this.nom = "sans nom";
@@ -37,7 +37,7 @@ namespace MyLib
             get { return this.description; }
             private set 
             {
-                if (!((value ?? "inderterminée").Equals("")))
+                if (string.IsNullOrWhiteSpace(description))
                     this.description = value;
                 else
                     this.description = "sans description";
@@ -64,9 +64,6 @@ namespace MyLib
             return Equals(obj as Element);
         }
 
-        public override int GetHashCode()
-        {
-            return Nom.GetHashCode();
-        }
+        public override int GetHashCode() => Nom.GetHashCode();
     }
 }

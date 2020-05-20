@@ -13,5 +13,6 @@ namespace UniversRE
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

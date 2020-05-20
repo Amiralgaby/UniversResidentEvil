@@ -4,17 +4,17 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UniversRE"
-             mc:Ignorable="d" 
+             mc:Ignorable="d" x:Name="root"
              d:DesignHeight="55" d:DesignWidth="200">
     <Grid>
-    <ListBoxItem>
-        <WrapPanel Background="White">
-            <Image Source="img/espionnage.jpg" MaxHeight="60" MaxWidth="60" Margin="2,2,2,2"/>
-            <TextBlock Width="100" TextWrapping="Wrap">
-                                        <Run Text="Monsieur Spy"/>
-                                        <Run Text="C'est le meilleur"/>
-            </TextBlock>
-        </WrapPanel>
-    </ListBoxItem>
+        <ListBoxItem>
+            <WrapPanel Background="White">
+                <Image Source="img/espionnage.jpg" MaxHeight="60" MaxWidth="60" Margin="2,2,2,2"/>
+                <TextBlock DataContext="{Binding Element}" Width="100" TextWrapping="Wrap">
+                                        <Run Text="{Binding Nom}"/>
+                                        <Run Text="{Binding Description}"/>
+                </TextBlock>
+            </WrapPanel>
+        </ListBoxItem>
     </Grid>
 </UserControl>

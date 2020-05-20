@@ -9,11 +9,8 @@
     <Grid>
         <DockPanel>
             <DockPanel Background="Brown" VerticalAlignment="Top" DockPanel.Dock="Top">
-                <DockPanel.DataContext>
-                    <Binding Source="" />
-                </DockPanel.DataContext>
-            <Image Source="/img/MyFullStar.png" Height="35" Width="35" Margin="2,2,4,2" DockPanel.Dock="Right" />
-                <TextBlock Text="Bienvenue sur l'application RE" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+                <Image Source="/img/MyFullStar.png" Height="35" Width="35" Margin="2,2,4,2" DockPanel.Dock="Right" />
+                <TextBlock Text="l'univers de resident evil" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
             </DockPanel>
             <DockPanel Margin="2">
                 <WrapPanel Orientation="Vertical" DockPanel.Dock="Left" HorizontalAlignment="Center" Background="Beige" >

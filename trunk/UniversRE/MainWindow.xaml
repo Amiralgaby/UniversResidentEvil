@@ -38,16 +38,19 @@
             <StackPanel>
                 <DockPanel MinHeight="300">
                     <ListBox MinWidth="130" HorizontalContentAlignment="Center" x:Name="lesElements" ItemsSource="{Binding Man.MesElements}">
-                        <!--<ListBox.ItemTemplate>
+                        <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel>
-                                    <TextBox Text="{Binding ElementName.Nom}"/>
+                                     <!--<TextBlock Text="{Binding Nom}"/>
+                                    <TextBlock Text="{Binding Description}" />-->
+                                    <TextBlock FontSize="16" Text="{Binding Nom}" Margin="2"/>
+                                    <TextBlock Text="{Binding Description}" Margin="2" />
                                 </WrapPanel>
                             </DataTemplate>
-                        </ListBox.ItemTemplate>-->
+                        </ListBox.ItemTemplate>
                     </ListBox>
                     <DockPanel>
-                        <local:Details/>
+                        <local:Details Grid.Column="1"/>
                     </DockPanel>
                 </DockPanel>
             </StackPanel>

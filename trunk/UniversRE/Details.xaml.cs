@@ -21,6 +21,7 @@ namespace UniversRE
     {
         public Details()
         {
+            Element Element = new Element("jaaj", "desceription");
             InitializeComponent();
         }
     }

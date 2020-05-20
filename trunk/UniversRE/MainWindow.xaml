@@ -12,7 +12,7 @@
             <Setter Property="Background" Value="{StaticResource ButtonBackgroundColor}" />
             <Setter Property="FontFamily" Value="{StaticResource defaultFontFamily}" />
             <Setter Property="FontSize" Value="16" />
-            <Setter Property="Background" Value="Black" />
+            <Setter Property="Background" Value="Chocolate" />
             <Setter Property="Foreground" Value="White" />
             <Setter Property="Padding" Value="4" />
         </Style>
@@ -29,9 +29,9 @@
         <DockPanel DockPanel.Dock="Top" Background="White" x:Name="My_dock_pan">
             <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Background="Beige">
                 <Button Content="Histoire" Style="{StaticResource StyleWrapPanel}"/>
-                <Button Content="Personnages" Style="{StaticResource StyleWrapPanel}" />
-                <Button Content="Créatures" Style="{StaticResource StyleWrapPanel}" />
-                <Button Content="Créature" Style="{StaticResource StyleWrapPanel}" />
+                <Button Content="Ajouter" Style="{StaticResource StyleWrapPanel}" />
+                <Button Content="Modifier" Style="{StaticResource StyleWrapPanel}" />
+                <Button Content="Supprimer" Style="{StaticResource StyleWrapPanel}" />
                 <Image Source="img/loupe-icon.jpg" MaxHeight="40" MaxWidth="40" />
                 <TextBox x:Name="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="32" FontSize="20" BorderBrush="Aquamarine" TextChanged="Recherche_TextChanged" />
             </WrapPanel>

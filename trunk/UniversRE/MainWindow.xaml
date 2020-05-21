@@ -41,10 +41,8 @@
                         <ListBox.ItemTemplate>
                             <DataTemplate>
                                 <WrapPanel>
-                                     <!--<TextBlock Text="{Binding Nom}"/>
-                                    <TextBlock Text="{Binding Description}" />-->
-                                    <TextBlock FontSize="16" Text="{Binding Nom}" Margin="2"/>
-                                    <TextBlock Text="{Binding Description}" Margin="2" />
+                                    <TextBlock FontSize="10" Text="{Binding Nom}" Margin="2" TextWrapping="Wrap"/>
+                                    <TextBlock FontSize="10" Text="{Binding Description}" Margin="2" TextWrapping="Wrap"/>
                                 </WrapPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

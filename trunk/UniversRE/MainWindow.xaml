@@ -40,9 +40,18 @@
                     <ListBox MinWidth="130" HorizontalContentAlignment="Center" x:Name="lesElements" ItemsSource="{Binding Man.MesElements}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <WrapPanel>
+                                <WrapPanel ><!--
                                     <TextBlock FontSize="10" Text="{Binding Nom}" Margin="2" TextWrapping="Wrap"/>
                                     <TextBlock FontSize="10" Text="{Binding Description}" Margin="2" TextWrapping="Wrap"/>
+                                    -->
+                                    <TextBlock MaxWidth="100" TextWrapping="WrapWithOverflow">
+                                        <TextBlock.Text>
+                                            <MultiBinding StringFormat="{}{0}&#10;{1}">
+                                                <Binding Path="Nom" />
+                                                <Binding Path="Description" />
+                                            </MultiBinding>
+                                        </TextBlock.Text>
+                                    </TextBlock>
                                 </WrapPanel>
                             </DataTemplate>
                         </ListBox.ItemTemplate>

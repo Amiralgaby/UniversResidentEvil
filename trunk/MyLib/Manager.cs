@@ -31,5 +31,18 @@ namespace MyLib
             ev.ModifierLieu(lieu);
             ev.ModifierDate(date);
         }
+
+        public List<Element> RechercherElementParNom(string nomAchercher)
+        {
+            List<Element> listRetourDeLaRecherche = new List<Element>();
+            foreach(Element e in mesElements)
+            {
+                if(e.Nom == nomAchercher)
+                {
+                    listRetourDeLaRecherche.Add(e);
+                }
+            }
+            return listRetourDeLaRecherche;
+        }
     }
 }

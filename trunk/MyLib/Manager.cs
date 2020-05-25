@@ -1,15 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Text;
 using System.Xml;
 
 namespace MyLib
 {
-    public class Manager
+    public class Manager : INotifyPropertyChanged
     {
         public LinkedList<Evenement> Histoire = new LinkedList<Evenement>();
         private ObservableCollection<Element> mesElements = new ObservableCollection<Element>();
+
+        public event PropertyChangedEventHandler PropertyChanged;
 
         public ObservableCollection<Element> MesElements
         {
@@ -17,6 +20,21 @@ namespace MyLib
             set { mesElements = value; }
         }
 
+        public Element ElementSelectionné 
+        { 
+            get => elementSelectionné;
+            set
+            {
+                if(elementSelectionné != value)
+                {
+                    elementSelectionné = value;
+                    OnPropertyChanged(nameof(elementSelectionné));
+                }
+            }
+        }
+        private Element elementSelectionné;
+
+        void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
         //Fonction pour la liste d'éléments
         public void AjouterElement(Element e) => MesElements.Add(e);
         public void SupprimerElement(Element e) => MesElements.Remove(e);
@@ -43,6 +61,17 @@ namespace MyLib
                 }
             }
             return listRetourDeLaRecherche;
+        }
+
+        public void ChargerLesDonnées()
+        {
+            mesElements.Add(new Element("Jean Bon", "L'homme le plus cool de l'univers"));
+            mesElements.Add(new Element("Moldu", "Truc", true));
+            mesElements.Add(new Element("Le dernier essai", "il n'a pas fait long feu", false));
+            mesElements.Add(new Personnage("Chaplin", "Charlie", "un génie"));
+            mesElements.Add(new Personnage("Tolvarld", "Linus", "un hacker"));
+            mesElements.Add(new Personnage("PlaceholderName", "PlaceHolderPrenom", "c'est a supprimer"));
+            ElementSelectionné = mesElements[0];
         }
     }
 }

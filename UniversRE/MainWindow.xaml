@@ -35,16 +35,15 @@
                 <Image Source="img/loupe-icon.jpg" MaxHeight="40" MaxWidth="40" />
                 <TextBox x:Name="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="32" FontSize="20" BorderBrush="Aquamarine" TextChanged="Recherche_TextChanged" />
             </WrapPanel>
-            <StackPanel>
+            <Grid>
                 <DockPanel MinHeight="300">
-                    <ListBox MinWidth="130" HorizontalContentAlignment="Center" x:Name="lesElements" ItemsSource="{Binding Man.MesElements}">
+                    <ListBox MinWidth="130" HorizontalContentAlignment="Center" x:Name="lesElements" 
+                             ItemsSource="{Binding MesElements}"
+                             SelectedItem="{Binding ElementSelectionné}">
                         <ListBox.ItemTemplate>
                             <DataTemplate>
-                                <WrapPanel ><!--
-                                    <TextBlock FontSize="10" Text="{Binding Nom}" Margin="2" TextWrapping="Wrap"/>
-                                    <TextBlock FontSize="10" Text="{Binding Description}" Margin="2" TextWrapping="Wrap"/>
-                                    -->
-                                    <TextBlock MaxWidth="100" TextWrapping="WrapWithOverflow">
+                                <WrapPanel>
+                                    <TextBlock MaxWidth="130" TextWrapping="WrapWithOverflow">
                                         <TextBlock.Text>
                                             <MultiBinding StringFormat="{}{0}&#10;{1}">
                                                 <Binding Path="Nom" />
@@ -57,10 +56,28 @@
                         </ListBox.ItemTemplate>
                     </ListBox>
                     <DockPanel>
-                        <local:Details Grid.Column="1"/>
+                        <DockPanel>
+                            <DockPanel Background="Brown" VerticalAlignment="Top" DockPanel.Dock="Top">
+                                <Image Source="/img/iconeEmptyStar.png" Height="35" Width="35" Margin="2,2,4,2" DockPanel.Dock="Right" />
+                                <TextBlock Text="{Binding ElementSelectionné}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+                            </DockPanel>
+                            <DockPanel Margin="2">
+                                <WrapPanel Orientation="Vertical" DockPanel.Dock="Left" HorizontalAlignment="Center" Background="Beige" >
+                                    <Image Source="img/Ombrella-icon.jpg" Width="200"  Height="200"/>
+                                    <TextBlock HorizontalAlignment="Stretch" Background="Brown" TextWrapping="Wrap" MaxWidth="250" >
+                                            <Run Text="Icône de Ombrella Corporation" FontWeight="DemiBold" FontSize="16" Foreground="BlanchedAlmond"/>
+                                    </TextBlock>
+                                </WrapPanel>
+                                <TextBlock Background="Beige" TextWrapping="Wrap">
+                                            <Run Text="Description:" FontSize="20" FontWeight="Bold"/>
+                                            <LineBreak Foreground="#FFF71616"/>
+                                            <Run Text="{Binding ElementSelectionné.Description}" />
+                                </TextBlock>
+                            </DockPanel>
+                        </DockPanel>
                     </DockPanel>
                 </DockPanel>
-            </StackPanel>
+            </Grid>
         </DockPanel>
     </DockPanel>
 </Window>

@@ -23,7 +23,7 @@ namespace MyLib
         }
         public void BasculerFavoris() => Favoris = !Favoris;
         public string Nom{
-            get { return this.nom; }
+            get => nom;
             private set
             {
                 if (string.IsNullOrWhiteSpace(nom))
@@ -34,7 +34,7 @@ namespace MyLib
         }
         private string nom;
         public string Description {
-            get { return this.description; }
+            get => description;
             private set 
             {
                 if (string.IsNullOrWhiteSpace(description))

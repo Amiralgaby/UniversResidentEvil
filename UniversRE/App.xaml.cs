@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLib;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -13,6 +14,11 @@ namespace UniversRE
     /// </summary>
     public partial class App : Application
     {
+        public Manager LeManager { get; private set; } = new Manager();
 
+        public App()
+        {
+            LeManager.ChargerLesDonnées();
+        }
     }
 }

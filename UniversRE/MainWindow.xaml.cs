@@ -21,19 +21,17 @@ namespace UniversRE
     /// </summary>
     public partial class MainWindow : Window
     {
-        public Manager Man { get; set; }
+        public Manager Man => (Application.Current as App).LeManager;
         public MainWindow()
         {
-            Man = new Manager();
             Man.AjouterElement(new Element("Jean Bon", "L'homme le plus cool de l'univers"));
             Man.AjouterElement(new Element("Moldu", "Truc", true));
             Man.AjouterElement(new Element("Le dernier essai", "il n'a pas fait long feu", false));
             Man.AjouterElement(new Personnage("Chaplin", "Charlie", "un génie"));
             Man.AjouterElement(new Personnage("Tolvarld", "Linus", "un hacker"));
-            Man.AjouterElement(new Personnage("PlaceholderName", "PlaceHolderPrenom", "c'est a supprimer"));
+            Man.AjouterElement(new Personnage("PlaceholderName", "PlaceHolderPrenom", "c'est à supprimer"));
 
-            
-            DataContext = this;
+            DataContext = Man;
             InitializeComponent();
         }
 
@@ -41,6 +39,5 @@ namespace UniversRE
         {
 
         }
-        //public Manager man => (Application.Current as App).Manager;
     }
 }

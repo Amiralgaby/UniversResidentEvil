@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="UniversRE.Details"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UniversRE"
+             mc:Ignorable="d" x:Name="details"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <DockPanel>
+            <DockPanel Background="Brown" VerticalAlignment="Top" DockPanel.Dock="Top">
+                <Image Source="/img/MyFullStar.png" Height="35" Width="35" Margin="2,2,4,2" DockPanel.Dock="Right" />
+                <TextBlock Text="l'univers de resident evil" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            </DockPanel>
+            <DockPanel Margin="2">
+                <WrapPanel Orientation="Vertical" DockPanel.Dock="Left" HorizontalAlignment="Center" Background="Beige" >
+                    <Image Source="img/Ombrella-icon.jpg" Width="200"  Height="200"/>
+                    <TextBlock HorizontalAlignment="Stretch" Background="Brown" TextWrapping="Wrap" MaxWidth="250" >
+                            <Run Text="Icône de Ombrella Corporation" FontWeight="DemiBold" FontSize="16" Foreground="BlanchedAlmond"/>
+                    </TextBlock>
+                </WrapPanel>
+                <TextBlock Background="Beige" TextWrapping="Wrap">
+                        <Run Text="Notre application :" FontSize="20" FontWeight="Bold"/>
+                        <LineBreak Foreground="#FFF71616"/>
+                        <Run Text="Univers RE est une application qui a pour but d'éduquer les joueurs novices ou non à l'univers de Resident Evil." />
+                        <LineBreak/>
+                        <Run Text="Cliquez sur un élément de la liste afin d'avoir ses détails, vous pourrez le mettre en favoris si vous le souhaitez." />
+                        <LineBreak />
+                        <Run Text="Vous pouvez sélctionner une catégorie ou faire une recherche d'un élément en particulier grâce à la barre de recherche située en haut." />
+                </TextBlock>
+            </DockPanel>
+        </DockPanel>
+    </Grid>
+</UserControl>

@@ -69,9 +69,9 @@
                                     </TextBlock>
                                 </WrapPanel>
                                 <TextBlock Background="Beige" TextWrapping="Wrap">
-                                            <Run Text="Description:" FontSize="20" FontWeight="Bold"/>
+                                            <Run Text="Description : " FontSize="20" FontWeight="Bold"/>
                                             <LineBreak Foreground="#FFF71616"/>
-                                            <Run Text="{Binding ElementSelectionné.Description}" />
+                                            <Run Text="{Binding ElementSelectionné}" />
                                 </TextBlock>
                             </DockPanel>
                         </DockPanel>

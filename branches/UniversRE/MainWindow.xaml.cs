@@ -42,15 +42,15 @@ namespace UniversRE
 
         private void MenuItem_Accueil_Click(object sender, RoutedEventArgs e)
         {
-
+            ContentControl.Content = new UCAccueil();
         }
-        private void Histoire_Click(object sender, RoutedEventArgs e)
+        private void Histoire_click(object sender, RoutedEventArgs e)
         {
-
+            
         }
         private void Ajouter_click(object sender, RoutedEventArgs e)
         {
-
+            ContentControl.Content = new UCajout();
         }
 
         private void Modifier_click(object sender, RoutedEventArgs e)

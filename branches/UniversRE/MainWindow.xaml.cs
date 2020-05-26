@@ -31,6 +31,7 @@ namespace UniversRE
             Man.AjouterElement(new Personnage("Tolvarld", "Linus", "un hacker"));
             Man.AjouterElement(new Personnage("PlaceholderName", "PlaceHolderPrenom", "c'est à supprimer"));
 
+            Man.AjouterEvenementAHistoire(new Evenement("Test de l'histoire", "test de l'autre","nulle part"));
             DataContext = Man;
             InitializeComponent();
         }
@@ -55,10 +56,10 @@ namespace UniversRE
 
         private void Modifier_click(object sender, RoutedEventArgs e)
         {
-
+            ContentControl.Content = new UCModification();
         }
 
-        private void Supprimer_Click(object sender, RoutedEventArgs e)
+        private void Supprimer_click(object sender, RoutedEventArgs e)
         {
 
         }

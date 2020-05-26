@@ -1,5 +1,4 @@
-﻿using MyLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,13 +14,12 @@ using System.Windows.Shapes;
 namespace UniversRE
 {
     /// <summary>
-    /// Logique d'interaction pour MyUC2.xaml
+    /// Logique d'interaction pour UCAccueil.xaml
     /// </summary>
-    public partial class Details : UserControl
+    public partial class UCAccueil : UserControl
     {
-        public Details()
+        public UCAccueil()
         {
-            Element Element = new Element("jaaj", "desceription");
             InitializeComponent();
         }
     }

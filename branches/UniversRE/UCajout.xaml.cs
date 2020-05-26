@@ -1,5 +1,4 @@
-﻿using MyLib;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -15,11 +14,11 @@ using System.Windows.Shapes;
 namespace UniversRE
 {
     /// <summary>
-    /// Logique d'interaction pour MyUc1.xaml
+    /// Logique d'interaction pour UCajout.xaml
     /// </summary>
-    public partial class Miniature : UserControl
+    public partial class UCajout : UserControl
     {
-        public Miniature()
+        public UCajout()
         {
             InitializeComponent();
         }

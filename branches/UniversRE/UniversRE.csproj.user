@@ -13,6 +13,9 @@
     <Compile Update="Details.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UCAccueil.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UCajout.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -25,6 +28,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Details.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCAccueil.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="UCajout.xaml">

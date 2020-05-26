@@ -39,5 +39,28 @@ namespace UniversRE
         {
 
         }
+
+        private void MenuItem_Accueil_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Histoire_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+        private void Ajouter_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Modifier_click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void Supprimer_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

@@ -5,9 +5,11 @@ VisualStudioVersion = 16.0.29920.165
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UniversRE", "UniversRE.csproj", "{1969027C-A3BF-4657-98F2-BF4C36011BE1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyLib", "..\MyLib\MyLib.csproj", "{57D57309-89F7-4B5B-95C1-9BD3DD42CDAB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLib", "..\MyLib\MyLib.csproj", "{57D57309-89F7-4B5B-95C1-9BD3DD42CDAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Test\Test.csproj", "{B134A6F5-CD57-4711-910E-D2AFC7F41DDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "..\Test\Test.csproj", "{B134A6F5-CD57-4711-910E-D2AFC7F41DDF}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup1", "..\Setup1\Setup1.vdproj", "{B3408824-6F55-4718-B249-D38F34AAED8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,8 @@ Global
 		{B134A6F5-CD57-4711-910E-D2AFC7F41DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B134A6F5-CD57-4711-910E-D2AFC7F41DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B134A6F5-CD57-4711-910E-D2AFC7F41DDF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3408824-6F55-4718-B249-D38F34AAED8F}.Debug|Any CPU.ActiveCfg = Debug
+		{B3408824-6F55-4718-B249-D38F34AAED8F}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

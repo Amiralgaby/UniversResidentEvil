@@ -22,5 +22,10 @@ namespace UniversRE
         {
             InitializeComponent();
         }
+
+        private void Image_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
+        {
+
+        }
     }
 }

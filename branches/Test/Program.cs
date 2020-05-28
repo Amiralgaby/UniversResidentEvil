@@ -32,8 +32,11 @@ namespace Test
             m.AjouterEvenementAHistoire(ev2);
             */
             m.ElementSelectionné = e;
-            Console.WriteLine(m.ElementSelectionné.Description);
-
+            Console.WriteLine(m);
+            Console.WriteLine("**********");
+            //Console.WriteLine(m.ElementSelectionné.Description);
+            m.SupprimerElement(m.ElementSelectionné);
+            Console.WriteLine(m);
         }
     }
 }

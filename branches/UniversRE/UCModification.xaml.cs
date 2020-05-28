@@ -23,7 +23,13 @@ namespace UniversRE
         public UCModification()
         {
             InitializeComponent();
-            DataContext = Man;
+            DataContext = Man.ElementSelectionné;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bool isChecked = BoxFavoris.IsChecked ?? false;
+            Man.ElementSelectionné.ModifierAttribut(BlockNom.Text, BlockDescription.Text, isChecked);
         }
     }
 }

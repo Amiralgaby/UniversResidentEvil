@@ -33,7 +33,7 @@
                 <Button Content="Modifier" Style="{StaticResource StyleWrapPanel}" Click="Modifier_click"/>
                 <Button Content="Supprimer" Style="{StaticResource StyleWrapPanel}" Click="Supprimer_click"/>
                 <Image Source="img/loupe-icon.jpg" MaxHeight="40" MaxWidth="40"/>
-                <TextBox x:Name="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" Width="100" Height="32" FontSize="20" BorderBrush="Aquamarine" TextChanged="Recherche_TextChanged" />
+                <TextBox x:Name="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="100" Height="32" FontSize="20" BorderBrush="Aquamarine" TextChanged="Recherche_TextChanged" />
             </WrapPanel>
             <Grid>
                 <ContentControl x:Name="ContentControl">

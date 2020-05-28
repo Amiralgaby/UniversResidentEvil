@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLib;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,9 +19,17 @@ namespace UniversRE
     /// </summary>
     public partial class UCajout : UserControl
     {
+        public Manager Man => (Application.Current as App).LeManager;
         public UCajout()
         {
             InitializeComponent();
+            DataContext = Man;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bool isChecked = BoxFavoris.IsChecked ?? false;
+            Man.AjouterElement(new Element(BlockNom.Text, BlockDescription.Text,isChecked));
         }
     }
 }

@@ -22,8 +22,12 @@ namespace UniversRE
     public partial class MainWindow : Window
     {
         public Manager Man => (Application.Current as App).LeManager;
+        List<Element> RechercheList = new List<Element>();
+        
         public MainWindow()
         {
+            Element e = new Element("Test", "supprime");
+            Man.AjouterElement(e);
             Man.AjouterElement(new Element("Jean Bon", "L'homme le plus cool de l'univers"));
             Man.AjouterElement(new Element("Moldu", "Truc", true));
             Man.AjouterElement(new Element("Le dernier essai", "il n'a pas fait long feu", false));
@@ -33,12 +37,16 @@ namespace UniversRE
 
             Man.AjouterEvenementAHistoire(new Evenement("Test de l'histoire", "test de l'autre","nulle part"));
             DataContext = Man;
+            //Man.SupprimerElement(e);
             InitializeComponent();
         }
 
         private void Recherche_TextChanged(object sender, TextChangedEventArgs e)
         {
+            RechercheList = Man.RechercherElementParNom(Recherche.Text);
 
+            if (RechercheList.Count != 0)
+                Man.ElementSelectionné = RechercheList[0];
         }
 
         private void MenuItem_Accueil_Click(object sender, RoutedEventArgs e)
@@ -61,7 +69,9 @@ namespace UniversRE
 
         private void Supprimer_click(object sender, RoutedEventArgs e)
         {
-
+            Man.MesElements.Remove(Man.ElementSelectionné);
+            //Man.SupprimerElement(Man.MesElements.);
+            ContentControl.Content = new UCAccueil();
         }
     }
 }

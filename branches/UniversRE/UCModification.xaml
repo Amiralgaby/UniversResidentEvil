@@ -35,15 +35,15 @@
             </TextBlock>
             <WrapPanel HorizontalAlignment="Center">
                 <TextBlock Text="Nom de votre  élément : " Style="{StaticResource StyleBlock}"/>
-                <TextBox Grid.Row="0" Text="{Binding Nom}" Style="{StaticResource StyleBox}"/>
+                <TextBox x:Name="BlockNom" Text="{Binding Nom,Mode=OneWay}" Style="{StaticResource StyleBox}"/>
             </WrapPanel>
         </DockPanel>
         <WrapPanel Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock Text="Description de votre élément : " Style="{StaticResource StyleBlock}" />
-            <TextBox Text="{Binding Description}" Style="{StaticResource StyleBox}"/>
+            <TextBox x:Name="BlockDescription" Text="{Binding Description,Mode=OneWay}" Style="{StaticResource StyleBox}"/>
         </WrapPanel>
         <TextBlock Grid.Row="2" Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
-        <CheckBox Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding Favoris}"></CheckBox>
-        <Button Grid.Row="3" HorizontalAlignment="Center" Content="Modifier l'élément"/>            
+        <CheckBox x:Name="BoxFavoris" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding Favoris,Mode=OneWay}"></CheckBox>
+        <Button Grid.Row="3" HorizontalAlignment="Center" Content="Modifier l'élément" Click="Button_Click"/>            
     </Grid>
 </UserControl>

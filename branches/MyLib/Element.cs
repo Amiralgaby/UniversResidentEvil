@@ -26,10 +26,13 @@ namespace MyLib
             get => nom;
             private set
             {
+                /*
                 if (string.IsNullOrWhiteSpace(nom))
-                    this.nom = value;
+                    nom = "sans nom";
                 else
-                    this.nom = "sans nom";
+                    nom = value;
+                */
+                nom = value;
             }
         }
         private string nom;
@@ -37,10 +40,13 @@ namespace MyLib
             get => description;
             private set 
             {
+                /*
                 if (string.IsNullOrWhiteSpace(description))
-                    this.description = value;
-                else
                     this.description = "sans description";
+                else
+                    this.description = value;
+                */
+                description = value;
             }
         }
         private string description;

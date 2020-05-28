@@ -35,15 +35,15 @@
             </TextBlock>
             <WrapPanel HorizontalAlignment="Center">
                 <TextBlock Text="Nom de votre  élément : " Style="{StaticResource StyleBlock}"/>
-                <TextBox Grid.Row="0" Text="LeNomChoisi" Style="{StaticResource StyleBox}"/>
+                <TextBox x:Name="BlockNom" Text="LeNomChoisi" Style="{StaticResource StyleBox}"/>
             </WrapPanel>
         </DockPanel>
         <WrapPanel Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock Text="Description de votre élément : " Style="{StaticResource StyleBlock}" />
-            <TextBox Text="LaDescriptionChoisi" Style="{StaticResource StyleBox}"/>
+            <TextBox x:Name="BlockDescription" Text="LaDescriptionChoisi" Style="{StaticResource StyleBox}"/>
         </WrapPanel>
         <TextBlock Grid.Row="2" Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
-        <CheckBox Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center"></CheckBox>
-        <Button Grid.Row="3" HorizontalAlignment="Center" Content="Ajouter Dans La Liste"/>
+        <CheckBox x:Name="BoxFavoris" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="False"></CheckBox>
+        <Button Grid.Row="3" HorizontalAlignment="Center" Content="Ajouter Dans La Liste" Click="Button_Click"/>
     </Grid>
 </UserControl>

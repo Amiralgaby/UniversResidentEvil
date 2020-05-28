@@ -28,7 +28,7 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <DockPanel>
-            <TextBlock DockPanel.Dock="Top" Grid.Row="0" Text="Fonction de modification d'un élément" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" Background="Yellow" >
+            <TextBlock DockPanel.Dock="Top" Grid.Row="0" Text="Fonction de modification d'un élément" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" Background="Goldenrod" >
                 <TextBlock.TextDecorations>
                     <TextDecoration/>
                 </TextBlock.TextDecorations>

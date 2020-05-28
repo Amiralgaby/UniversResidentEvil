@@ -65,12 +65,32 @@ namespace MyLib
 
         public void ChargerLesDonnées()
         {
-            mesElements.Add(new Element("Jean Bon", "L'homme le plus cool de l'univers"));
-            mesElements.Add(new Element("Moldu", "Truc", true));
-            mesElements.Add(new Element("Le dernier essai", "il n'a pas fait long feu", false));
-            mesElements.Add(new Personnage("Chaplin", "Charlie", "un génie"));
-            mesElements.Add(new Personnage("Tolvarld", "Linus", "un hacker"));
-            mesElements.Add(new Personnage("PlaceholderName", "PlaceHolderPrenom", "c'est a supprimer"));
+            AjouterElement(new Personnage("Valentine", "Jill", "Elle est experte dans le maniement des armes à feu, le crochetage de serrures et la neutralisation d'explosifs."));
+
+            AjouterElement(new Personnage(" Aiken", "Richard", ""));
+
+            AjouterElement(new Personnage("Chambers", "Rebecca", ""));
+
+            AjouterElement(new Personnage("Coen", "Billy", ""));
+
+            AjouterElement(new Personnage("Dewey", "Edward", ""));
+
+            AjouterElement(new Creature("Nemesis", "MéchantDescription", Dangerosité.Très_dangereux));
+
+            AjouterElement(new Creature("T-00",
+                "Le T-103, aussi appelé communément Mr. X, est l'un des antagonistes de Resident Evil 2 (1998) et Resident Evil 2 (2019). C'est une arme biologique de catégorie Tyran." +
+                "Sa mission principale est de récupérer l'échantillon de Virus-G.",
+                Dangerosité.Très_dangereux));
+
+            AjouterElement(new Creature("Tyran", "", Dangerosité.Menace));
+
+            AjouterElement(new Creature("Plaga",
+                "Contrairement au Virus-t, qui transformait ses victimes en zombies écervelés, les Plagas sont des parasites qui prennent le contrôle du système nerveux des hôtes dans lesquels ils sont implantés." +
+                " Les personnes infectées par ce parasite (Ganado comme Majini) deviennent beaucoup plus fortes et très résistantes à la douleur, tout en travaillant collectivement à la poursuite de leurs objectifs." +
+                "D'autres effets secondaires incluent la perte complète de raisonnement — sauf chez certains sujets (qui ne sont toutefois pas en mesure de résister à la nécessité d'obéir à des ordres supérieurs) — et la pleine conformité à l’espèce de Plaga dominante.",
+                Dangerosité.Dangereux));
+
+
             ElementSelectionné = mesElements[0];
         }
     }

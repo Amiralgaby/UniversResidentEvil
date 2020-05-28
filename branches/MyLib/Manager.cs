@@ -9,7 +9,7 @@ namespace MyLib
 {
     public class Manager : INotifyPropertyChanged
     {
-        public LinkedList<Evenement> Histoire = new LinkedList<Evenement>();
+        public List<Evenement> Histoire = new List<Evenement>();
         private ObservableCollection<Element> mesElements = new ObservableCollection<Element>();
 
         public event PropertyChangedEventHandler PropertyChanged;
@@ -42,7 +42,7 @@ namespace MyLib
         public void BasculerFavoris(Element e) => e.BasculerFavoris();
 
         //Fonctions pour l'histoire (la liste d'événement)
-        public void AjouterEvenementAHistoire(Evenement ev) => Histoire.AddLast(ev);
+        public void AjouterEvenementAHistoire(Evenement ev) => Histoire.Add(ev);
         public void SupprimerEvenementAHistoire(Evenement ev) => Histoire.Remove(ev);
         public void ModifierEvenementAHistoire(Evenement ev, string lieu, DateTime date)
         {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLib;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,8 +19,10 @@ namespace UniversRE
     /// </summary>
     public partial class UCHistoire : UserControl
     {
+        public Manager Man => (Application.Current as App).LeManager;
         public UCHistoire()
         {
+            DataContext = Man;
             InitializeComponent();
         }
     }

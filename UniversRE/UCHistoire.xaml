@@ -26,6 +26,9 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
+            <StackPanel>
+                
+            </StackPanel>
         </DockPanel>     
     </Grid>
 </UserControl>

@@ -23,18 +23,9 @@ namespace UniversRE
     {
         public Manager Man => (Application.Current as App).LeManager;
         List<Element> RechercheList = new List<Element>();
-        
+        List<Element> listeActive = new List<Element>();
         public MainWindow()
         {
-            Element e = new Element("Test", "supprime");
-            Man.AjouterElement(e);
-            Man.AjouterElement(new Element("Jean Bon", "L'homme le plus cool de l'univers"));
-            Man.AjouterElement(new Element("Moldu", "Truc", true));
-            Man.AjouterElement(new Element("Le dernier essai", "il n'a pas fait long feu", false));
-            Man.AjouterElement(new Personnage("Chaplin", "Charlie", "un génie"));
-            Man.AjouterElement(new Personnage("Tolvarld", "Linus", "un hacker"));
-            Man.AjouterElement(new Personnage("PlaceholderName", "PlaceHolderPrenom", "c'est à supprimer"));
-
             Man.AjouterEvenementAHistoire(new Evenement("Test de l'histoire", "test de l'autre","nulle part"));
             DataContext = Man;
             //Man.SupprimerElement(e);
@@ -55,7 +46,7 @@ namespace UniversRE
         }
         private void Histoire_click(object sender, RoutedEventArgs e)
         {
-            
+            ContentControl.Content = new UCHistoire();
         }
         private void Ajouter_click(object sender, RoutedEventArgs e)
         {

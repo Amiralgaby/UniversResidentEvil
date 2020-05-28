@@ -22,7 +22,7 @@ namespace Test
             m.AjouterElement(new Personnage("Tolvarld", "Linus", "un hacker"));
             m.AjouterElement(new Personnage("PlaceholderName", "PlaceHolderPrenom", "c'est a supprimer"));
             m.AjouterElement(e);
-
+            /*
             Evenement ev1 = new Evenement("Rien", "il ne sait r passé", "nulle part");
             Evenement ev2 = new Evenement("Ma naissance", "je suis né", "Moulins", DateTime.FromOADate(16 / 09 / 2001));
             m.AjouterElement(ev1);
@@ -30,6 +30,13 @@ namespace Test
             m.AjouterEvenementAHistoire(ev);
             m.AjouterEvenementAHistoire(ev1);
             m.AjouterEvenementAHistoire(ev2);
+            */
+            m.ElementSelectionné = e;
+            Console.WriteLine(m);
+            Console.WriteLine("**********");
+            //Console.WriteLine(m.ElementSelectionné.Description);
+            m.SupprimerElement(m.ElementSelectionné);
+            Console.WriteLine(m);
         }
     }
 }

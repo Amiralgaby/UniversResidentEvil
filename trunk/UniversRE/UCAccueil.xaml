@@ -13,14 +13,21 @@
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <WrapPanel>
-                        <TextBlock MaxWidth="130" TextWrapping="WrapWithOverflow" Text="{Binding Nom}"/>
+                        <TextBlock MaxWidth="130" TextWrapping="WrapWithOverflow">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0}&#10;{1}">
+                                    <Binding Path="Nom" />
+                                    <Binding Path="Description" />
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
                     </WrapPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
         <DockPanel Background="Brown" VerticalAlignment="Top" DockPanel.Dock="Top">
             <Image Source="/img/iconeEmptyStar.png" Height="35" Width="35" Margin="2,2,4,2" DockPanel.Dock="Right" IsHitTestVisible="False"/>
-            <TextBlock DataContext="{Binding ElementSelectionné}" Text="{Binding Nom,Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
+            <TextBlock Text="{Binding ElementSelectionné}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
         </DockPanel>
         <DockPanel Margin="2">
             <WrapPanel Orientation="Vertical" DockPanel.Dock="Left" HorizontalAlignment="Center" Background="Beige" >
@@ -29,10 +36,10 @@
                                             <Run Text="Icône de Ombrella Corporation" FontWeight="DemiBold" FontSize="16" Foreground="BlanchedAlmond"/>
                 </TextBlock>
             </WrapPanel>
-            <TextBlock DataContext="{Binding ElementSelectionné}" Background="Beige" TextWrapping="Wrap">
+            <TextBlock Background="Beige" TextWrapping="Wrap">
                                             <Run Text="Description : " FontSize="20" FontWeight="Bold"/>
                                             <LineBreak Foreground="#FFF71616"/>
-                                            <Run Text="{Binding Description,Mode=OneWay}" />
+                                            <Run Text="{Binding ElementSelectionné}" />
             </TextBlock>
         </DockPanel>
     </DockPanel>

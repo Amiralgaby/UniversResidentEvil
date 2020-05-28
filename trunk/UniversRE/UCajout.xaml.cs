@@ -15,13 +15,21 @@ using System.Windows.Shapes;
 namespace UniversRE
 {
     /// <summary>
-    /// Logique d'interaction pour MyUc1.xaml
+    /// Logique d'interaction pour UCajout.xaml
     /// </summary>
-    public partial class Miniature : UserControl
+    public partial class UCajout : UserControl
     {
-        public Miniature()
+        public Manager Man => (Application.Current as App).LeManager;
+        public UCajout()
         {
             InitializeComponent();
+            DataContext = Man;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            bool isChecked = BoxFavoris.IsChecked ?? false;
+            Man.AjouterElement(new Element(BlockNom.Text, BlockDescription.Text,isChecked));
         }
     }
 }

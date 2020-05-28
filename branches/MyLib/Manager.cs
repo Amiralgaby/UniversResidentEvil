@@ -65,12 +65,14 @@ namespace MyLib
 
         public void ChargerLesDonnées()
         {
-            mesElements.Add(new Element("Jean Bon", "L'homme le plus cool de l'univers"));
-            mesElements.Add(new Element("Moldu", "Truc", true));
-            mesElements.Add(new Element("Le dernier essai", "il n'a pas fait long feu", false));
-            mesElements.Add(new Personnage("Chaplin", "Charlie", "un génie"));
-            mesElements.Add(new Personnage("Tolvarld", "Linus", "un hacker"));
-            mesElements.Add(new Personnage("PlaceholderName", "PlaceHolderPrenom", "c'est a supprimer"));
+            AjouterElement(new Personnage("Valentine", "Jill", "Elle est experte dans le maniement des armes à feu, le crochetage de serrures et la neutralisation d'explosifs."));
+            AjouterElement(new Personnage(" Aiken", "Richard", ""));
+            AjouterElement(new Personnage("Chambers", "Rebecca", ""));
+            AjouterElement(new Personnage("Coen", "Billy", ""));
+            AjouterElement(new Personnage("Dewey", "Edward", ""));
+            AjouterElement(new Creature("Nemesis", "MéchantDescription", Dangerosité.Très_dangereux));
+            AjouterElement(new Creature("T-00", "MéchantDescription", Dangerosité.Très_dangereux));
+            AjouterElement(new Creature("Tyran", "TyranDescription", Dangerosité.Menace));
             ElementSelectionné = mesElements[0];
         }
     }

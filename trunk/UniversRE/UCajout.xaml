@@ -38,10 +38,10 @@
                 <TextBox x:Name="BlockNom" Text="LeNomChoisi" Style="{StaticResource StyleBox}"/>
             </WrapPanel>
         </DockPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+        <WrapPanel Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock Text="Description de votre élément : " Style="{StaticResource StyleBlock}" />
-            <TextBox MinHeight="50" x:Name="BlockDescription" Text="LaDescriptionChoisi" TextWrapping="Wrap"  Style="{StaticResource StyleBox}"/>
-        </StackPanel>
+            <TextBox x:Name="BlockDescription" Text="LaDescriptionChoisi" Style="{StaticResource StyleBox}"/>
+        </WrapPanel>
         <TextBlock Grid.Row="2" Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
         <CheckBox x:Name="BoxFavoris" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="False"></CheckBox>
         <Button Grid.Row="3" HorizontalAlignment="Center" Content="Ajouter Dans La Liste" Click="Button_Click"/>

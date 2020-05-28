@@ -7,10 +7,16 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="Miniature.xaml.cs">
+    <Compile Update="UCAccueil.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Details.xaml.cs">
+    <Compile Update="UCajout.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCHistoire.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="UCModification.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -18,10 +24,16 @@
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Miniature.xaml">
+    <Page Update="UCAccueil.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Details.xaml">
+    <Page Update="UCajout.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCHistoire.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="UCModification.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

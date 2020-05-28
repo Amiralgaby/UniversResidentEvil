@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyLib;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Windows;
@@ -18,14 +19,10 @@ namespace UniversRE
     /// </summary>
     public partial class UCAccueil : UserControl
     {
+        public Manager Man => (Application.Current as App).LeManager;
         public UCAccueil()
         {
             InitializeComponent();
-        }
-
-        private void Image_IsEnabledChanged(object sender, DependencyPropertyChangedEventArgs e)
-        {
-
         }
     }
 }

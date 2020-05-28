@@ -15,12 +15,6 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_84B34296EC204412821F7CB09AC8A721"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_E240A2D8637842048585AE8A7971FDB7"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -43,6 +37,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -59,6 +61,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
     }
     "Deployable"
@@ -90,26 +100,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_84B34296EC204412821F7CB09AC8A721"
-            {
-            "SourcePath" = "8:..\\..\\..\\..\\..\\..\\UniversREicon.ico"
-            "TargetName" = "8:UniversREicon.ico"
-            "Tag" = "8:"
-            "Folder" = "8:_BA564E99B7A34FB1912F51C4D43084AA"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
         }
         "FileType"
         {
@@ -309,7 +299,7 @@
             "Target" = "8:_E240A2D8637842048585AE8A7971FDB7"
             "Folder" = "8:_D852AA5F03CA4250B821E6A32ABEBB31"
             "WorkingFolder" = "8:_35424723BA26490FA7E75BF72743C5C1"
-            "Icon" = "8:_84B34296EC204412821F7CB09AC8A721"
+            "Icon" = "8:"
             "Feature" = "8:"
             }
         }
@@ -713,7 +703,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E240A2D8637842048585AE8A7971FDB7"
             {
-            "SourcePath" = "8:..\\UniversRE\\obj\\Debug\\netcoreapp3.1\\UniversRE.exe"
+            "SourcePath" = "8:"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_35424723BA26490FA7E75BF72743C5C1"

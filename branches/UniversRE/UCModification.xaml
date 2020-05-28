@@ -38,10 +38,10 @@
                 <TextBox x:Name="BlockNom" Text="{Binding Nom,Mode=OneWay}" Style="{StaticResource StyleBox}"/>
             </WrapPanel>
         </DockPanel>
-        <WrapPanel Grid.Row="1" HorizontalAlignment="Center">
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock Text="Description de votre élément : " Style="{StaticResource StyleBlock}" />
-            <TextBox x:Name="BlockDescription" Text="{Binding Description,Mode=OneWay}" Style="{StaticResource StyleBox}"/>
-        </WrapPanel>
+            <TextBox MinHeight="50" x:Name="BlockDescription" Text="{Binding Description,Mode=OneWay}" TextWrapping="Wrap" Style="{StaticResource StyleBox}"/>
+        </StackPanel>
         <TextBlock Grid.Row="2" Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
         <CheckBox x:Name="BoxFavoris" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="{Binding Favoris,Mode=OneWay}"></CheckBox>
         <Button Grid.Row="3" HorizontalAlignment="Center" Content="Modifier l'élément" Click="Button_Click"/>            

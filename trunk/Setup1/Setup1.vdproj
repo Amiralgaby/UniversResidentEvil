@@ -44,6 +44,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
         "Release"
@@ -68,6 +76,14 @@
             "PrerequisitesLocation" = "2:1"
             "Url" = "8:"
             "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
+                    }
+                }
             }
         }
     }
@@ -168,7 +184,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Univers RE"
         "ProductCode" = "8:{E744C40D-1F7A-4D12-AF4B-62DA82CDBFBD}"
-        "PackageCode" = "8:{00BCF07E-5CC1-4966-A2FB-0701DFAF78C2}"
+        "PackageCode" = "8:{5AE9EECF-58AE-4FD1-9B8D-9347907EE59E}"
         "UpgradeCode" = "8:{FAE9BC10-C695-4D09-B4F6-A8A31781F907}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -181,7 +197,7 @@
         "ARPHELPLINK" = "8:"
         "Title" = "8:Univers RE Setup"
         "Subject" = "8:"
-        "ARPCONTACT" = "8:Project2020c#-UniversRE"
+        "ARPCONTACT" = "8:TheuwsCojeanG6"
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:Test-Description"
         "ARPURLINFOABOUT" = "8:"
@@ -703,7 +719,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E240A2D8637842048585AE8A7971FDB7"
             {
-            "SourcePath" = "8:"
+            "SourcePath" = "8:..\\UniversRE\\obj\\Debug\\netcoreapp3.1\\UniversRE.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_35424723BA26490FA7E75BF72743C5C1"

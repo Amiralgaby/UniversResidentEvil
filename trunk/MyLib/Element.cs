@@ -4,6 +4,9 @@ namespace MyLib
 {
     public class Element : IEquatable<Element>
     {
+        private string nom;
+        private string description;
+
         public Element(string nom, string description)
             : this(nom,description,false){}
         public Element(string nom, string description, Boolean favoris)
@@ -35,7 +38,7 @@ namespace MyLib
                 nom = value;
             }
         }
-        private string nom;
+        
         public string Description {
             get => description;
             private set 
@@ -49,7 +52,7 @@ namespace MyLib
                 description = value;
             }
         }
-        private string description;
+        
         public bool Favoris { get; private set; }
         public override string ToString()
         {

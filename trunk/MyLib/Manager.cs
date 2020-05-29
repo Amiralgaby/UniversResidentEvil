@@ -9,6 +9,8 @@ namespace MyLib
 {
     public class Manager : INotifyPropertyChanged
     {
+        private Element elementSelectionné; 
+        
         public List<Evenement> Histoire = new List<Evenement>();
         private ObservableCollection<Element> mesElements = new ObservableCollection<Element>();
 
@@ -32,7 +34,7 @@ namespace MyLib
                 }
             }
         }
-        private Element elementSelectionné;
+        
 
         void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
         //Fonction pour la liste d'éléments
@@ -118,6 +120,14 @@ namespace MyLib
         public void ChargerLesDonnées()
         {
             AjouterElement(new Personnage("Valentine", "Jill", "Elle est experte dans le maniement des armes à feu, le crochetage de serrures et la neutralisation d'explosifs."));
+
+            AjouterElement(new Personnage("Kennedy", "Leon Scott", "Leon semble être un jeune homme naïf avec un fort sens de la justice, et ayant pour priorité de venir en aide aux faibles."));
+
+            AjouterElement(new Personnage("Redfield", "Claire", "Elle sait faire face à des situations imprévues grâce à une grande imagination, elle échafaude des plans extravagants mais qui sont généralement efficaces."));
+
+            AjouterElement(new Personnage("Redfield", "Chris", "Chris Redfield a commencé sa carrière militaire en tant que pilote de l'US Air Force."));
+
+            AjouterElement(new Personnage("Wong", "Ada", "Elle est une belle mercenaire américaine vraisemblablement d'origine chinoise, extrêmement habile en espionnage et redoutable au combat."));
 
             AjouterElement(new Personnage(" Aiken", "Richard", "Membre de l'équipe Bravo des S.T.A.R.S. Il agit en renfort de l'équipe. Il veille également sur la nouvelle recrue,"+
                 " Rebecca Chambers. Il fera tout ce qui est en son pouvoir pour protéger quelqu'un, allant même jusqu'à mettre sa vie en danger."+"" +

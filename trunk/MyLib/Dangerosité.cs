@@ -7,10 +7,10 @@ namespace MyLib
     public enum Dangerosité
     {
         Innoffensif = 0,
-        Sûr,
-        Menace,
-        Dangereux,
-        Très_dangereux,
-        Boss,
+        Sûr = 1,
+        Menace = 2,
+        Dangereux = 3,
+        Très_dangereux = 4,
+        Boss = 6,
     }
 }

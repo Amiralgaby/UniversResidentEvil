@@ -60,9 +60,7 @@ namespace UniversRE
 
         private void Supprimer_click(object sender, RoutedEventArgs e)
         {
-            Man.MesElements.Remove(Man.ElementSelectionné);
-            //Man.SupprimerElement(Man.MesElements.);
-            ContentControl.Content = new UCAccueil();
+            Man.SupprimerElement(Man.ElementSelectionné);
         }
     }
 }

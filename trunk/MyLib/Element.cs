@@ -59,7 +59,7 @@ namespace MyLib
 
         public bool Equals(Element other)
         {
-            return Nom.Equals(other.Nom) && Description.Equals(other.Nom);
+            return Nom.Equals(other.Nom) && Description.Equals(other.Description);
         }
 
         public override bool Equals(object obj)

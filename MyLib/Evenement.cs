@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MyLib
 {
-    public class Evenement : Element
+    public class Evenement : Element, IComparable, IComparable<Evenement>
     {
         public Evenement(string nom, string description, string lieu)
             : this(nom,description,lieu,DateTime.Now)
@@ -17,9 +17,14 @@ namespace MyLib
             Lieu = lieu;
             Date = date;
         }
-        public void ModifierLieu(string lieu) => Lieu = lieu;
-        public void ModifierDate(DateTime date) => Date = date;
         public string Lieu { get; private set; }
         public DateTime Date { get; private set; }
+        public void ModifierLieu(string lieu) => Lieu = lieu;
+        public void ModifierDate(DateTime date) => Date = date;
+
+        public int CompareTo(Evenement other)
+        {
+            return Date.CompareTo(other.Date);
+        }
     }
 }

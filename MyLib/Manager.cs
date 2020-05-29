@@ -52,6 +52,7 @@ namespace MyLib
             ev.ModifierDate(date);
         }
 
+        public void TrierLaListe() => Histoire.Sort();
         public List<Element> RechercherElementParNom(string nomAchercher)
         {
             List<Element> listRetourDeLaRecherche = new List<Element>();

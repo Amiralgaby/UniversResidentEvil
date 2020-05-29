@@ -38,18 +38,17 @@ namespace Test
                 Console.WriteLine(o);
             }
             Console.WriteLine("**********");
-            //Console.WriteLine(m.ElementSelectionné.Description);
-            bool isDone = m.SupprimerElement(e);
-            Console.WriteLine(isDone);
-            bool isGood = e.Equals(e);
-            Console.WriteLine(isGood);
+            string Jean = "je suis qu'un test";
+            Console.WriteLine(string.IsNullOrWhiteSpace(Jean));
+            m.AjouterElement(new Element(Jean, ""));
             foreach (Element o in m.MesElements)
             {
                 Console.WriteLine(o);
             }
 
+
             List<Element> listDelement;
-            listDelement = m.RechercherElementParNom("Coen");
+            listDelement = m.RechercherElementParNom("Linus");
             Console.WriteLine(listDelement.Count);
             foreach(Element o in listDelement)
             {

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using MyLib;
 
 namespace Test
@@ -43,6 +44,14 @@ namespace Test
             bool isGood = e.Equals(e);
             Console.WriteLine(isGood);
             foreach (Element o in m.MesElements)
+            {
+                Console.WriteLine(o);
+            }
+
+            List<Element> listDelement = new List<Element>();
+            listDelement = m.RechercherElementParNom("Coen");
+            Console.WriteLine(listDelement.Count);
+            foreach(Element o in listDelement)
             {
                 Console.WriteLine(o);
             }

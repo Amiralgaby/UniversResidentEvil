@@ -25,7 +25,6 @@
             <RowDefinition/>
             <RowDefinition/>
             <RowDefinition/>
-            <RowDefinition/>
         </Grid.RowDefinitions>
         <DockPanel>
             <TextBlock DockPanel.Dock="Top" Grid.Row="0" Text="Fonction d'ajout d'un élément" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" Background="Goldenrod" >
@@ -42,8 +41,10 @@
             <TextBlock Text="Description de votre élément : " Style="{StaticResource StyleBlock}" />
             <TextBox MinHeight="50" x:Name="BlockDescription" Text="LaDescriptionChoisi" TextWrapping="Wrap"  Style="{StaticResource StyleBox}"/>
         </StackPanel>
-        <TextBlock Grid.Row="2" Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
-        <CheckBox x:Name="BoxFavoris" Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="False"></CheckBox>
-        <Button Grid.Row="3" HorizontalAlignment="Center" Content="Ajouter Dans La Liste" Click="Button_Click"/>
+        <StackPanel Grid.Row="2" Margin="0,8,0,0">
+            <TextBlock Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
+            <CheckBox x:Name="BoxFavoris" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="False"></CheckBox>
+            <Button HorizontalAlignment="Center" Content="Ajouter Dans La Liste" Click="Button_Click"/>
+        </StackPanel>
     </Grid>
 </UserControl>

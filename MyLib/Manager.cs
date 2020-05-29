@@ -37,7 +37,7 @@ namespace MyLib
         void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
         //Fonction pour la liste d'éléments
         public void AjouterElement(Element e) => MesElements.Add(e);
-        public void SupprimerElement(Element e) => MesElements.Remove(e);
+        public bool SupprimerElement(Element e) { return MesElements.Remove(e); }
         public void ModifierElement(Element e, string nom, string description,bool favoris) => e.ModifierAttribut(nom, description, favoris);
         public void BasculerFavoris(Element e) => e.BasculerFavoris();
 

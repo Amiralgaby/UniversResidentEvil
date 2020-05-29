@@ -11,5 +11,6 @@ namespace MyLib
         Menace,
         Dangereux,
         Très_dangereux,
+        Boss,
     }
 }

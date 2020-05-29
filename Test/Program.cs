@@ -48,7 +48,7 @@ namespace Test
                 Console.WriteLine(o);
             }
 
-            List<Element> listDelement = new List<Element>();
+            List<Element> listDelement;
             listDelement = m.RechercherElementParNom("Coen");
             Console.WriteLine(listDelement.Count);
             foreach(Element o in listDelement)

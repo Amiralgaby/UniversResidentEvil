@@ -23,7 +23,6 @@ namespace UniversRE
     {
         public Manager Man => (Application.Current as App).LeManager;
         List<Element> RechercheList = new List<Element>();
-        List<Element> listeActive = new List<Element>();
         public MainWindow()
         {
             Man.AjouterEvenementAHistoire(new Evenement("Test de l'histoire", "test de l'autre","nulle part"));

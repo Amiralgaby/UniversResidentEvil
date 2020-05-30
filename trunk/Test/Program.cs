@@ -38,9 +38,14 @@ namespace Test
                 Console.WriteLine(o);
             }
             Console.WriteLine("**********");
-            string Jean = "je suis qu'un test";
-            Console.WriteLine(string.IsNullOrWhiteSpace(Jean));
-            m.AjouterElement(new Element(Jean, ""));
+            try
+            {
+                m.AjouterElement(new Element("je suis qu'un test", ""));
+            }
+            catch(Exception excep)
+            {
+                Console.WriteLine("Une execution s'est mal passé : "+excep.Message);
+            }
             foreach (Element o in m.MesElements)
             {
                 Console.WriteLine(o);

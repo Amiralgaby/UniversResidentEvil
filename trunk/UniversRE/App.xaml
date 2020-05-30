@@ -14,6 +14,25 @@
             </ResourceDictionary.MergedDictionaries>
             <SolidColorBrush Color="BurlyWood" x:Key="ButtonBackgroundColor" />
             <FontFamily x:Key="defaultFontFamily">Comic Sans MS</FontFamily>
+
+            <Style TargetType="TextBlock" x:Key="StyleMessageErreur">
+                <Setter Property="Visibility" Value="Hidden" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="FontFamily" Value="Arial" />
+                <Setter Property="HorizontalAlignment" Value="Center"/>
+            </Style>
+            
+            <Style TargetType="TextBox" x:Key="StyleBox" >
+                <Setter Property="Background" Value="LightBlue" />
+                <Setter Property="BorderBrush" Value="Blue" />
+                <Setter Property="BorderThickness" Value="2" />
+            </Style>
+            
+            <Style TargetType="TextBlock" x:Key="StyleBlock" >
+                <Setter Property="Background" Value="White"/>
+                <Setter Property="FontSize" Value="20" />
+            </Style>
+            
         </ResourceDictionary>
     </Application.Resources>
 </Application>

@@ -6,17 +6,6 @@
              xmlns:local="clr-namespace:UniversRE"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <UserControl.Resources>
-        <Style TargetType="TextBlock" x:Key="StyleBlock" >
-            <Setter Property="Background" Value="White"/>
-            <Setter Property="FontSize" Value="20" />
-        </Style>
-        <Style TargetType="TextBox" x:Key="StyleBox" >
-            <Setter Property="Background" Value="LightBlue" />
-            <Setter Property="BorderBrush" Value="Blue" />
-            <Setter Property="BorderThickness" Value="2" />
-        </Style>
-    </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -45,6 +34,7 @@
             <TextBlock Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" Padding="0,0,15,0"/>
             <CheckBox x:Name="BoxFavoris" HorizontalAlignment="Center" IsChecked="{Binding Favoris,Mode=OneWay}"></CheckBox>
             <Button HorizontalAlignment="Center" Content="Modifier l'élément" Click="Button_Click"/>
+            <TextBlock x:Name="BlockMessageErreur" Style="{StaticResource StyleMessageErreur}" Margin="4"/>
         </StackPanel>
     </Grid>
 </UserControl>

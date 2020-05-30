@@ -22,9 +22,9 @@ namespace MyLib
             get => nom;
             private set
             {
-                
-                if (string.IsNullOrWhiteSpace(nom) != true)
-                    nom = "sans nom";
+
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new Exception("La valeur nom passée en paramètre est nulle ou vide");
                 else
                     nom = value;
             }
@@ -34,8 +34,8 @@ namespace MyLib
             get => description;
             private set 
             {
-                if (string.IsNullOrWhiteSpace(description) != true)
-                    this.description = "sans description";
+                if (string.IsNullOrWhiteSpace(value))
+                    throw new Exception("La valeur description passée en paramètre est nulle ou vide");
                 else
                     this.description = value;
             }

@@ -27,7 +27,7 @@
                 </ListBox.ItemTemplate>
             </ListBox>
             <StackPanel>
-                
+                <TextBlock Text="La fonctionnalité n'est pas encore disponible" FontSize="30" Background="Brown" />
             </StackPanel>
         </DockPanel>     
     </Grid>

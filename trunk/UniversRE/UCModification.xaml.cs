@@ -29,7 +29,22 @@ namespace UniversRE
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             bool isChecked = BoxFavoris.IsChecked ?? false;
-            Man.ElementSelectionné.ModifierAttribut(BlockNom.Text, BlockDescription.Text, isChecked);
+            try
+            {
+                Man.ElementSelectionné.ModifierAttribut(BlockNom.Text, BlockDescription.Text, isChecked);
+
+                AfficheBlockMessageErreur(Brushes.Green, "La modification à été effectué avec succès");
+            }
+            catch(Exception excep)
+            {
+                AfficheBlockMessageErreur(Brushes.Red, excep.Message);
+            }
+        }
+        private void AfficheBlockMessageErreur(Brush brushes, string message)
+        {
+            BlockMessageErreur.Text = message;
+            BlockMessageErreur.Background = brushes;
+            BlockMessageErreur.Visibility = Visibility.Visible;
         }
     }
 }

@@ -27,7 +27,6 @@ namespace UniversRE
         {
             Man.AjouterEvenementAHistoire(new Evenement("Test de l'histoire", "test de l'autre","nulle part"));
             DataContext = Man;
-            //Man.SupprimerElement(e);
             InitializeComponent();
         }
 

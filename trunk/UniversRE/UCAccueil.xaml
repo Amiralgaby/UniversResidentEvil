@@ -19,7 +19,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <DockPanel Background="Brown" VerticalAlignment="Top" DockPanel.Dock="Top">
-            <Image x:Name="ImageFavoris" Source="/img/iconeEmptyStar.png" Height="35" Width="35" Margin="2,2,4,2" DockPanel.Dock="Right" />
+            <Image DataContext="ElementSelectionné" x:Name="ImageFavoris" Height="35" Width="35" Margin="2,2,4,2" DockPanel.Dock="Right" />
             <TextBlock DataContext="{Binding ElementSelectionné}" Text="{Binding Nom,Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
         </DockPanel>
         <DockPanel Margin="2">

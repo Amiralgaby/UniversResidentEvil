@@ -10,12 +10,13 @@ namespace MyLib
 {
     public class Manager : INotifyPropertyChanged
     {
-        private Element elementSelectionné; 
-        
+        private Element elementSelectionné;
+        private Evenement evenementSelectionné;
+        public IPersistanceManager Persistance;
         public List<Evenement> Histoire = new List<Evenement>();
         private ObservableCollection<Element> mesElements = new ObservableCollection<Element>();
 
-        public event PropertyChangedEventHandler PropertyChanged;
+        
 
         public ObservableCollection<Element> MesElements
         {
@@ -35,9 +36,53 @@ namespace MyLib
                 }
             }
         }
-        
 
+        public Evenement EvenementSelectionné
+        {
+            get => evenementSelectionné;
+            set
+            {
+                if (evenementSelectionné != value)
+                {
+                    evenementSelectionné = value;
+                    OnPropertyChanged(nameof(evenementSelectionné));
+                }
+            }
+        }
+        /*
+        public Manager(IPersistanceManager persistance)
+        {
+            Persistance = persistance;
+        }
+        
+        public void ChargeLesDonnées()
+        {
+            var données = Persistance.ChargerLesDonnées();
+            foreach(var donnée in données.elements)
+            {
+                mesElements.Add(donnée);
+            }
+            foreach(var donnée in données.evenements)
+            {
+                Histoire.Add(donnée);
+            }
+        }
+
+        public void SauvegarderLesDonnées()
+        {
+            Persistance.SauvegarderLesDonnées(mesElements,Histoire);
+        }
+        */
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        /// <summary>
+        /// fonction qui avertit qu'un attribut dans la classe à été modifié
+        /// </summary>
+        /// <param name="propertyName">le nom de l'événement changé</param>
         void OnPropertyChanged(string propertyName) => PropertyChanged?.Invoke(this,new PropertyChangedEventArgs(propertyName));
+
+
         //Fonction pour la liste d'éléments
         public void AjouterElement(Element e) => MesElements.Add(e);
         public bool SupprimerElement(Element e) { return MesElements.Remove(e); }
@@ -54,6 +99,12 @@ namespace MyLib
         }
 
         public void TrierLaListe() => Histoire.Sort();
+
+        /// <summary>
+        /// Permet de rechercher un élément composée du nom donné en paramètre
+        /// </summary>
+        /// <param name="nomAchercher">la chaîne de caractères à chercher dans la liste</param>
+        /// <returns>Une liste d'élément ayant des éléments avec une distance de Levenshtein inférieur à 4</returns>
         public List<Element> RechercherElementParNom(string nomAchercher)
         {
             List<Element> listRetourDeLaRecherche = new List<Element>();
@@ -67,6 +118,14 @@ namespace MyLib
             return listRetourDeLaRecherche;
         }
 
+        /// <summary>
+        /// Fonction permettant de trouver la similarité en "distance" entre 2 string
+        /// plus la valeur est petite, plus les deux string se ressemblent
+        /// </summary>
+        /// <param name="a">la valeur à comparer</param>
+        /// <param name="b">la valeur de référence à comparer (on peut intervertir les deux aussi)</param>
+        /// <returns>un chiffre donnant la distance entre les deux string</returns>
+        /// Source : https://blog.sodifrance.fr/algorithme-de-levenshtein-en-c-net/
         private Int32 SimilaritéLevenshtein(String a, String b)
         {
             if (string.IsNullOrEmpty(a))
@@ -115,10 +174,12 @@ namespace MyLib
                     d[i, j] = Math.Min(Math.Min(min1, min2), min3);
                 }
             }
-
             return d[d.GetUpperBound(0), d.GetUpperBound(1)];
         }
 
+        /// <summary>
+        /// Permet de chager les données au début de l'execution du programme
+        /// </summary>
         public void ChargerLesDonnées()
         {
             AjouterElement(new Personnage("Valentine", "Jill", "Elle est experte dans le maniement des armes à feu, le crochetage de serrures et la neutralisation d'explosifs."));
@@ -170,9 +231,15 @@ namespace MyLib
                 " Les personnes infectées par ce parasite (Ganado comme Majini) deviennent beaucoup plus fortes et très résistantes à la douleur, tout en travaillant collectivement à la poursuite de leurs objectifs." +
                 "D'autres effets secondaires incluent la perte complète de raisonnement — sauf chez certains sujets (qui ne sont toutefois pas en mesure de résister à la nécessité d'obéir à des ordres supérieurs) — et la pleine conformité à l’espèce de Plaga dominante.",
                 Dangerosité.Dangereux));
-            
+
+            Evenement e = new Evenement("Placeholder1", "Sa description","lieu loin");
+            AjouterElement(e);
+            AjouterEvenementAHistoire(e);
+
+            AjouterEvenementAHistoire(new Evenement("Création de la sage RE", "qqch", "bureau"));
             
             ElementSelectionné = mesElements[0]; //Element sélectionné par défaut
+            EvenementSelectionné = Histoire[0]; //Evenement sélectionné par défaut
         }
     }
 }

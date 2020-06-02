@@ -31,8 +31,9 @@ Des informations biologiques tel que leur taille, poids, âge, … et des informati
 
 ###Recherche par termes
 
-Nous comptons inclure une recherche par termes afin que l'utilisateur puisse trouver l'information qu'il souhaite rapidement sans chercher dans l'application de haut en bas et de bas en haut en perdant du temps pour un simple détail par exemple. 
-Pour ceci, une barre de recherche pourrais être mise en place dans lequel l'utilisateur peut rentrer un terme, un nom de personnage, de créature.. et trouvera une page de détails associée au terme demandé. Dans le cas où le terme n'existe pas, une requête pourra être possible afin d'être ajouté et de compléter l'application.
+Nous comptons inclure une recherche par nom d'élément afin que l'utilisateur puisse trouver l'information qu'il souhaite rapidement sans chercher dans l'application de haut en bas et de bas en haut en perdant du temps pour un simple détail par exemple. 
+La recherche fonctionne sur le principe de la distance de Levenshtein afin que les résultats soit le plus similaire possible à l'entrée donnée. Si un terme n'existe pas il sera possible de l'ajouter.
 
-Notre master-detail à la particularité de ne pas se focaliser sur le jeu lui même qui sont les plus populaires puisque la série n'est pas exclusif à ceux-ci. La série a été adapté sur plusieurs supports, racontant une partie de l'histoire que les joueurs peuvent ne pas connaître, eux qui ne jouent qu'exclusivement. De plus la barre de recherche simplifie les possibles recherche futur des utilisateurs au lieu de mettre très longtemps à trouver cette information, voir même ne pas la trouver du tout. Nous avons remarqué d'autant plus qu'il y avait que très peu de master-détail sur ce thème. 
+Notre master-detail à la particularité de ne pas se focaliser sur le jeu lui même qui sont les plus populaires puisque la série n'est pas exclusif à ceux-ci. La série a été adapté sur plusieurs supports, racontant une partie de l'histoire que les joueurs peuvent ne pas connaître, eux qui ne jouent qu'exclusivement.
+De plus la barre de recherche simplifie les possibles recherche futur des utilisateurs au lieu de mettre très longtemps à trouver cette information, voir même ne pas la trouver du tout. Nous avons remarqué d'autant plus qu'il y avait que très peu de master-détail sur ce thème. 
 Il sert donc à rassembler des informations sur des personnages, créatures, événements en se basant sur les jeux, mangas, films et série dont ils font leur apparitions.

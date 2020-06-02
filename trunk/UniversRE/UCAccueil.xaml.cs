@@ -1,6 +1,7 @@
 ﻿using MyLib;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -23,6 +24,11 @@ namespace UniversRE
         public UCAccueil()
         {
             InitializeComponent();
+            
+            if (Man.ElementSelectionné.Favoris != false)
+                monImage.Source = new BitmapImage(new Uri("img/iconeFullstar.png", UriKind.Relative));
+            else
+                monImage.Source = new BitmapImage(new Uri("img/iconeEmptystar.png", UriKind.Relative));
         }
     }
 }

@@ -9,7 +9,7 @@
     <Grid>
         <DockPanel>
             <ListBox MinWidth="130" HorizontalContentAlignment="Center" x:Name="LHistoire" 
-                             ItemsSource="{Binding Histoire}"
+                             ItemsSource="{Binding}"
                              SelectedItem="{Binding EvenementSelectionné}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
@@ -18,7 +18,7 @@
                                 <TextBlock.Text>
                                     <MultiBinding StringFormat="{}{0}&#10;{1}">
                                         <Binding Path="Nom" />
-                                        <Binding Path="Description" />
+                                        <Binding Path="Lieu" />
                                     </MultiBinding>
                                 </TextBlock.Text>
                             </TextBlock>
@@ -27,7 +27,8 @@
                 </ListBox.ItemTemplate>
             </ListBox>
             <StackPanel>
-                <TextBlock Text="La fonctionnalité n'est pas encore disponible" FontSize="30" Background="Brown" />
+                <TextBlock x:Name="jaaj" Text="La fonctionnalité n'est pas encore disponible" FontSize="30" Background="Brown" />
+                <ProgressBar DataContext="this" Minimum="0" Maximum="100" Value="{Binding LeNombre}" Height="8" Name="AvanceBar"></ProgressBar>
             </StackPanel>
         </DockPanel>     
     </Grid>

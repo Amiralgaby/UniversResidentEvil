@@ -23,12 +23,12 @@
             </TextBlock>
             <WrapPanel HorizontalAlignment="Center">
                 <TextBlock Text="Nom de votre  élément : " Style="{StaticResource StyleBlock}"/>
-                <TextBox x:Name="BlockNom" Text="{Binding Nom,Mode=OneWay}" Style="{StaticResource StyleBox}"/>
+                <TextBox x:Name="BlockNom" Text="{Binding Nom,Mode=OneWay,FallbackValue=NomÀModifier}" Style="{StaticResource StyleBox}"/>
             </WrapPanel>
         </DockPanel>
         <StackPanel Grid.RowSpan="2" Grid.Row="1" HorizontalAlignment="Center">
             <TextBlock Text="Description de votre élément : " Style="{StaticResource StyleBlock}" />
-            <TextBox MinHeight="50" x:Name="BlockDescription" Text="{Binding Description,Mode=OneWay}" TextWrapping="Wrap" Style="{StaticResource StyleBox}"/>
+            <TextBox MinHeight="50" x:Name="BlockDescription" Text="{Binding Description,Mode=OneWay,FallbackValue=DescriptionÀModifier}" TextWrapping="Wrap" Style="{StaticResource StyleBox}"/>
         </StackPanel>
         <StackPanel Grid.Row="2" Margin="0,8,0,0">
             <TextBlock Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" Padding="0,0,15,0"/>

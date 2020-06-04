@@ -184,7 +184,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Univers RE"
         "ProductCode" = "8:{E744C40D-1F7A-4D12-AF4B-62DA82CDBFBD}"
-        "PackageCode" = "8:{5AE9EECF-58AE-4FD1-9B8D-9347907EE59E}"
+        "PackageCode" = "8:{91C753D0-0B1D-4659-8C79-8E688F38D17B}"
         "UpgradeCode" = "8:{FAE9BC10-C695-4D09-B4F6-A8A31781F907}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -304,6 +304,20 @@
         }
         "Shortcut"
         {
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_04F404A1EB384D7E9BBB3719197E2060"
+            {
+            "Name" = "8:monShortcut"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_E240A2D8637842048585AE8A7971FDB7"
+            "Folder" = "8:_35424723BA26490FA7E75BF72743C5C1"
+            "WorkingFolder" = "8:_35424723BA26490FA7E75BF72743C5C1"
+            "Icon" = "8:"
+            "Feature" = "8:"
+            }
             "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D38C6EAF89BF4630A195C3D0804EF289"
             {
             "Name" = "8:UniversRE Shortcut"

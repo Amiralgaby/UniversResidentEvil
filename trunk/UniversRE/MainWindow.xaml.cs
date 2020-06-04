@@ -25,9 +25,8 @@ namespace UniversRE
         List<Element> RechercheList = new List<Element>();
         public MainWindow()
         {
-            Man.AjouterEvenementAHistoire(new Evenement("Test de l'histoire", "test de l'autre","nulle part"));
-            DataContext = Man;
             InitializeComponent();
+            DataContext = Man;      
         }
 
         private void Recherche_TextChanged(object sender, TextChangedEventArgs e)

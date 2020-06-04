@@ -21,7 +21,7 @@ namespace MyLib
             set
             {
                 if (value < 0) indice = 15;
-                else indice = (value*100)/Histoire.Count;
+                else indice = (value*100)/(Histoire.Count-1);
                 OnPropertyChanged(nameof(indice));
             }
         }
@@ -127,6 +127,8 @@ namespace MyLib
             }
             return listRetourDeLaRecherche;
         }
+
+        ///ObservableCollection<Element> RechercherElementParNom = MesElements.Where(e => SimilaritéLevenshtein(e.Nom,nomAchercher) < 4);
 
         /// <summary>
         /// Fonction permettant de trouver la similarité en "distance" entre 2 string

@@ -24,6 +24,7 @@ namespace UniversRE
     {
         public Manager Man => (Application.Current as App).LeManager;
         public ReadOnlyCollection<Evenement> CollectionEvenement => (Application.Current as App).LeManager.Histoire.AsReadOnly();
+        public int HistoireCount => 100/((Application.Current as App).LeManager.Histoire.Count-1);
         public UCHistoire()
         {
             InitializeComponent();

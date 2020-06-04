@@ -30,8 +30,8 @@
                 <DockPanel Background="Brown">
                     <TextBlock DataContext="{Binding EvenementSelectionné}" Text="{Binding Nom,FallbackValue=MonEvenement}" Style="{StaticResource StyleEnTete}" Padding="4" />
                 </DockPanel>
-                <ProgressBar Minimum="0" Maximum="100" Value="{Binding Indice}" Height="8" />
-                <TextBlock DataContext="{Binding EvenementSelectionné}" Background="Gainsboro" >
+                <Slider x:Name="mySlider" Maximum="100" Minimum="0" TickPlacement="BottomRight" Value="{Binding Indice}"/>
+                <TextBlock DataContext="{Binding EvenementSelectionné}" Background="Gainsboro">
                     <Run Text="Description : " FontSize="20"/>
                     <Run Text="{Binding Description,Mode=OneWay}" FontSize="14"/>
                 </TextBlock>

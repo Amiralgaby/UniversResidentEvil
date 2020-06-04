@@ -8,9 +8,9 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
         <DockPanel>
-            <ListBox MinWidth="130" HorizontalContentAlignment="Center" x:Name="LHistoire" 
-                             ItemsSource="{Binding}"
-                             SelectedItem="{Binding EvenementSelectionné}">
+            <ListBox MinWidth="130" HorizontalContentAlignment="Center"
+                             ItemsSource="{Binding CollectionEvenement}"
+                             SelectedItem="{Binding Man.EvenementSelectionné}">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <WrapPanel>
@@ -26,9 +26,15 @@
                     </DataTemplate>
                 </ListBox.ItemTemplate>
             </ListBox>
-            <StackPanel>
-                <TextBlock x:Name="jaaj" Text="La fonctionnalité n'est pas encore disponible" FontSize="30" Background="Brown" />
-                <ProgressBar DataContext="this" Minimum="0" Maximum="100" Value="{Binding LeNombre}" Height="8" Name="AvanceBar"></ProgressBar>
+            <StackPanel DataContext="{Binding Man}">
+                <DockPanel Background="Brown">
+                    <TextBlock DataContext="{Binding EvenementSelectionné}" Text="{Binding Nom,FallbackValue=MonEvenement}" Style="{StaticResource StyleEnTete}" Padding="4" />
+                </DockPanel>
+                <ProgressBar Minimum="0" Maximum="100" Value="{Binding Indice}" Height="8" />
+                <TextBlock DataContext="{Binding EvenementSelectionné}" Background="Gainsboro" >
+                    <Run Text="Description : " FontSize="20"/>
+                    <Run Text="{Binding Description,Mode=OneWay}" FontSize="14"/>
+                </TextBlock>
             </StackPanel>
         </DockPanel>     
     </Grid>

@@ -12,11 +12,19 @@ namespace MyLib
     {
         private Element elementSelectionné;
         private Evenement evenementSelectionné;
+        private int indice = 0;
         public IPersistanceManager Persistance;
         public List<Evenement> Histoire = new List<Evenement>();
         private ObservableCollection<Element> mesElements = new ObservableCollection<Element>();
 
-        
+        public int Indice { get => indice;
+            set
+            {
+                if (value < 0) indice = 15;
+                else indice = (value*100)/Histoire.Count;
+                OnPropertyChanged(nameof(indice));
+            }
+        }
 
         public ObservableCollection<Element> MesElements
         {
@@ -45,10 +53,12 @@ namespace MyLib
                 if (evenementSelectionné != value)
                 {
                     evenementSelectionné = value;
+                    Indice = Histoire.IndexOf(value);
                     OnPropertyChanged(nameof(evenementSelectionné));
                 }
             }
         }
+
         /*
         public Manager(IPersistanceManager persistance)
         {

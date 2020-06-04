@@ -1,0 +1,34 @@
+﻿<Window x:Class="UniversRE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UniversRE"
+        mc:Ignorable="d"
+        Title="Univers_RE" Height="450" Width="800">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top" >
+            <MenuItem Header="Accueil" Click="MenuItem_Accueil_Click">
+            </MenuItem>
+            <MenuItem Header="Options" >
+                <MenuItem Header="Importer" />
+                <MenuItem Header="Sauvegarder" />
+            </MenuItem>
+        </Menu>
+        <DockPanel DockPanel.Dock="Top" Background="White" x:Name="My_dock_pan">
+            <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Background="Beige">
+                <Button Content="Histoire" Style="{StaticResource StyleWrapPanel}" Click="Histoire_click"/>
+                <Button Content="Ajouter" Style="{StaticResource StyleWrapPanel}" Click="Ajouter_click"/>
+                <Button Content="Modifier" Style="{StaticResource StyleWrapPanel}" Click="Modifier_click"/>
+                <Button Content="Supprimer" Style="{StaticResource StyleWrapPanel}" Click="Supprimer_click"/>
+                <Image Source="img/loupe-icon.jpg" MaxHeight="40" MaxWidth="40"/>
+                <TextBox x:Name="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="100" Height="32" FontSize="20" BorderBrush="Aquamarine" TextChanged="Recherche_TextChanged" />
+            </WrapPanel>
+            <Grid>
+                <ContentControl x:Name="ContentControl">
+                    <local:UCAccueil/>
+                </ContentControl>
+            </Grid>
+        </DockPanel>
+    </DockPanel>
+</Window>

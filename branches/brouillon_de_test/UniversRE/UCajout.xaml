@@ -1,0 +1,40 @@
+﻿<UserControl x:Class="UniversRE.UCajout"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:UniversRE"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <DockPanel>
+            <TextBlock DockPanel.Dock="Top" Grid.Row="0" Text="Fonction d'ajout d'un élément" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="25" Background="Goldenrod" >
+                <TextBlock.TextDecorations>
+                    <TextDecoration/>
+                </TextBlock.TextDecorations>
+            </TextBlock>
+            <WrapPanel HorizontalAlignment="Center">
+                <TextBlock Text="Nom de votre  élément : " Style="{StaticResource StyleBlock}"/>
+                <TextBox x:Name="BlockNom" Text="LeNomChoisi" Style="{StaticResource StyleBox}"/>
+            </WrapPanel>
+        </DockPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+            <TextBlock Text="Description de votre élément : " Style="{StaticResource StyleBlock}" />
+            <TextBox MinHeight="50" x:Name="BlockDescription" Text="LaDescriptionChoisi" TextWrapping="Wrap"  Style="{StaticResource StyleBox}"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" Margin="0,8,0,0">
+            <TextBlock Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
+            <CheckBox x:Name="BoxFavoris" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="False"></CheckBox>
+            <Button HorizontalAlignment="Center" Content="Ajouter Dans La Liste" Click="Button_Click"/>
+            <TextBlock x:Name="BlockMessageErreur" Style="{StaticResource StyleMessageErreur}" Margin="4"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

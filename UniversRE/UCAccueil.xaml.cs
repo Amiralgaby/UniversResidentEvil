@@ -21,14 +21,25 @@ namespace UniversRE
     public partial class UCAccueil : UserControl
     {
         public Manager Man => (Application.Current as App).LeManager;
+        //public string IsFavoris => (Application.Current as App).LeManager.IsMyElementSelectionnéFavoris;
         public UCAccueil()
         {
             InitializeComponent();
-            
+            SourceDeMonImage();
+        }
+
+        private void MonImage_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            Man.ElementSelectionné.BasculerFavoris();
+            SourceDeMonImage();
+        }
+
+        private void SourceDeMonImage()
+        {
             if (Man.ElementSelectionné.Favoris != false)
-                monImage.Source = new BitmapImage(new Uri("img/iconeFullstar.png", UriKind.Relative));
+                MonImage.Source = new BitmapImage(new Uri("img/iconeFullstar.png", UriKind.Relative));
             else
-                monImage.Source = new BitmapImage(new Uri("img/iconeEmptystar.png", UriKind.Relative));
+                MonImage.Source = new BitmapImage(new Uri("img/iconeEmptystar.png", UriKind.Relative));
         }
     }
 }

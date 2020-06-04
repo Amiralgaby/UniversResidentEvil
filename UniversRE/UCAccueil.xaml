@@ -19,7 +19,7 @@
             </ListBox.ItemTemplate>
         </ListBox>
         <DockPanel Background="Brown" VerticalAlignment="Top" DockPanel.Dock="Top">
-            <Image x:Name="monImage" Height="35" Width="35" Margin="2,2,4,2" DockPanel.Dock="Right" />
+            <Image x:Name="MonImage" Height="35" Width="35" Margin="2,2,4,2" DockPanel.Dock="Right" MouseUp="MonImage_MouseUp"/>
             <TextBlock DataContext="{Binding ElementSelectionné}" Text="{Binding Nom,Mode=OneWay}" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="20"/>
         </DockPanel>
         <DockPanel Margin="2">

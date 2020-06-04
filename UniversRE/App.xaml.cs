@@ -18,13 +18,7 @@ namespace UniversRE
 
         public App()
         {
-            try
-            {
-                LeManager.ChargerLesDonnées();
-            }catch(Exception)
-            {
-
-            }
+            LeManager.ChargerLesDonnées();
         }
     }
 }

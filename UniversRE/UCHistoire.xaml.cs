@@ -23,16 +23,11 @@ namespace UniversRE
     public partial class UCHistoire : UserControl
     {
         public Manager Man => (Application.Current as App).LeManager;
-        ReadOnlyCollection<Evenement> CollectionEvenement = (Application.Current as App).LeManager.Histoire.AsReadOnly();
-
+        public ReadOnlyCollection<Evenement> CollectionEvenement => (Application.Current as App).LeManager.Histoire.AsReadOnly();
         public UCHistoire()
         {
             InitializeComponent();
-            int IndiceDansLaCollection = CollectionEvenement.IndexOf(Man.EvenementSelectionné) < 0 ? 0 : CollectionEvenement.IndexOf(Man.EvenementSelectionné);
-            int LeNombre = (IndiceDansLaCollection*100)/ CollectionEvenement.Count;
-
-            AvanceBar.Value = LeNombre;
-            DataContext = CollectionEvenement;
+            DataContext = this;
         }
     }
 }

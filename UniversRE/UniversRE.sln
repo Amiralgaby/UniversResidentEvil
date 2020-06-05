@@ -9,8 +9,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyLib", "..\MyLib\MyLib.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "..\Test\Test.csproj", "{B134A6F5-CD57-4711-910E-D2AFC7F41DDF}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Univers RE Setup", "..\..\trunk\Setup1\Setup1.vdproj", "{74C905C5-FC2A-4BB1-AD9E-C516ABD5A5A3}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -29,10 +27,6 @@ Global
 		{B134A6F5-CD57-4711-910E-D2AFC7F41DDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B134A6F5-CD57-4711-910E-D2AFC7F41DDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B134A6F5-CD57-4711-910E-D2AFC7F41DDF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74C905C5-FC2A-4BB1-AD9E-C516ABD5A5A3}.Debug|Any CPU.ActiveCfg = Debug
-		{74C905C5-FC2A-4BB1-AD9E-C516ABD5A5A3}.Debug|Any CPU.Build.0 = Debug
-		{74C905C5-FC2A-4BB1-AD9E-C516ABD5A5A3}.Release|Any CPU.ActiveCfg = Release
-		{74C905C5-FC2A-4BB1-AD9E-C516ABD5A5A3}.Release|Any CPU.Build.0 = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

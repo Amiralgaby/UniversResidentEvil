@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Linq;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -13,17 +14,26 @@ namespace MyLib
         private Element elementSelectionné;
         private Evenement evenementSelectionné;
         private int indice = 0;
+        //private string ElementSelectionnéIsFavoris => ElementSelectionné.Favoris != false ? "img/iconeFullstar.png" : "img/iconeEmptystar.png";
         public IPersistanceManager Persistance;
         public List<Evenement> Histoire = new List<Evenement>();
         private ObservableCollection<Element> mesElements = new ObservableCollection<Element>();
+        private ObservableCollection<Element> mesFavoris = new ObservableCollection<Element>();
+        private ObservableCollection<Element> ColletionActuelle;
 
         public int Indice { get => indice;
             set
             {
                 if (value < 0) indice = 15;
-                else indice = (value*100)/(Histoire.Count-1);
+                else indice = (value * 100) / (Histoire.Count - 1);
                 OnPropertyChanged(nameof(indice));
             }
+        }
+
+        public ObservableCollection<Element> MesFavoris
+        {
+            get { return mesFavoris; }
+            set { mesFavoris = value; }
         }
 
         public ObservableCollection<Element> MesElements
@@ -32,12 +42,18 @@ namespace MyLib
             set { mesElements = value; }
         }
 
-        public Element ElementSelectionné 
-        { 
+        public ObservableCollection<Element> ListActuelle
+        {
+            get { return ColletionActuelle; }
+            set { ColletionActuelle = value; }
+        }
+
+        public Element ElementSelectionné
+        {
             get => elementSelectionné;
             set
             {
-                if(elementSelectionné != value)
+                if (elementSelectionné != value)
                 {
                     elementSelectionné = value;
                     OnPropertyChanged(nameof(elementSelectionné));
@@ -59,10 +75,19 @@ namespace MyLib
             }
         }
 
+        public ObservableCollection<Element> MesFavorisLINQ => new ObservableCollection<Element>(MesElements.Where(e => e.Favoris != false));
+
+        //ObservableCollection<Element> MesFavorisLINQ => new ObservableCollection<Element>(MesElements.Where(e => e.Favoris != false));
+        public Manager()
+        {
+            ColletionActuelle = MesElements;
+        }
+
         /*
         public Manager(IPersistanceManager persistance)
         {
             Persistance = persistance;
+            ObservableCollection<Element> RechercherElementParNomLINQ = MesElements.Where(e => SimilaritéLevenshtein(e.Nom,nomAchercher) < 4);
         }
         
         public void ChargeLesDonnées()
@@ -128,8 +153,7 @@ namespace MyLib
             return listRetourDeLaRecherche;
         }
 
-        ///ObservableCollection<Element> RechercherElementParNom = MesElements.Where(e => SimilaritéLevenshtein(e.Nom,nomAchercher) < 4);
-
+        public ObservableCollection<Element> RechercherElementParNomLINQ(string nomAchercher) => new ObservableCollection<Element>(MesElements.Where(e => SimilaritéLevenshtein(e.Nom, nomAchercher) < 4));
         /// <summary>
         /// Fonction permettant de trouver la similarité en "distance" entre 2 string
         /// plus la valeur est petite, plus les deux string se ressemblent
@@ -247,7 +271,7 @@ namespace MyLib
             Evenement e = new Evenement("Placeholder1", "Sa description","lieu loin");
             AjouterElement(e);
             AjouterEvenementAHistoire(e);
-
+            e.BasculerFavoris();
             AjouterEvenementAHistoire(new Evenement("Création de la sage RE", "qqch", "bureau"));
             
             ElementSelectionné = mesElements[0]; //Element sélectionné par défaut

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:UniversRE"
              mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
+             d:DesignHeight="600" d:DesignWidth="900">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
@@ -21,20 +21,32 @@
                     <TextDecoration/>
                 </TextBlock.TextDecorations>
             </TextBlock>
-            <WrapPanel HorizontalAlignment="Center">
-                <TextBlock Text="Nom de votre  élément : " Style="{StaticResource StyleBlock}"/>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Text="Quel type d'élément choississez-vous ?" Style="{StaticResource MaterialDesignBody1TextBlock}" />
+                <RadioButton IsChecked="True" Margin="9">Personnage</RadioButton>
+                <RadioButton Margin="9">Créature</RadioButton>
+                <RadioButton Margin="9">Événement</RadioButton>
+            </StackPanel>
+        </DockPanel>
+
+        <StackPanel HorizontalAlignment="Center" Grid.Row="1">
+            <WrapPanel>
+                <TextBlock Text="Nom de votre  élément : " Style="{StaticResource StyleBlock}" DockPanel.Dock="Left"/>
                 <TextBox x:Name="BlockNom" Text="LeNomChoisi" Style="{StaticResource StyleBox}"/>
             </WrapPanel>
-        </DockPanel>
-        <StackPanel Grid.Row="1" HorizontalAlignment="Center">
-            <TextBlock Text="Description de votre élément : " Style="{StaticResource StyleBlock}" />
-            <TextBox MinHeight="50" x:Name="BlockDescription" Text="LaDescriptionChoisi" TextWrapping="Wrap"  Style="{StaticResource StyleBox}"/>
+            <StackPanel Grid.Row="1" HorizontalAlignment="Center">
+                <TextBlock Text="Description de votre élément : " Style="{StaticResource StyleBlock}" />
+                <TextBox MinHeight="50" x:Name="BlockDescription" Text="LaDescriptionChoisi" TextWrapping="Wrap"  Style="{StaticResource StyleBox}"/>
+            </StackPanel>
         </StackPanel>
-        <StackPanel Grid.Row="2" Margin="0,8,0,0">
+
+
+        <StackPanel Grid.Row="2" Margin="0,8,0,0" VerticalAlignment="Center">
             <TextBlock Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
             <CheckBox x:Name="BoxFavoris" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="False"></CheckBox>
             <Button HorizontalAlignment="Center" Content="Ajouter Dans La Liste" Click="Button_Click"/>
             <TextBlock x:Name="BlockMessageErreur" Style="{StaticResource StyleMessageErreur}" Margin="4"/>
         </StackPanel>
+        
     </Grid>
 </UserControl>

@@ -32,19 +32,19 @@ namespace UniversRE
             try
             {
                 Man.AjouterElement(new Element(BlockNom.Text, BlockDescription.Text, isChecked));
-                AfficheBlockMessageErreur(Brushes.Green, "L'ajout à été effectué avec succès");
+                AfficheBlockMessageInfo(Brushes.Green, "L'ajout à été effectué avec succès");
             }
             catch(Exception excep)
             {
-                AfficheBlockMessageErreur(Brushes.Red, excep.Message);
+                AfficheBlockMessageInfo(Brushes.Red, excep.Message);
             }            
         }
 
-        private void AfficheBlockMessageErreur(Brush brushes, string message)
+        private void AfficheBlockMessageInfo(Brush brushes, string message)
         {
-            BlockMessageErreur.Text = message;
-            BlockMessageErreur.Background = brushes;
-            BlockMessageErreur.Visibility = Visibility.Visible;
+            BlockMessageInfo.Text = message;
+            BlockMessageInfo.Background = brushes;
+            BlockMessageInfo.Visibility = Visibility.Visible;
         }
     }
 }

@@ -45,7 +45,7 @@
             <TextBlock Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
             <CheckBox x:Name="BoxFavoris" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="False"></CheckBox>
             <Button HorizontalAlignment="Center" Content="Ajouter Dans La Liste" Click="Button_Click"/>
-            <TextBlock x:Name="BlockMessageErreur" Style="{StaticResource StyleMessageErreur}" Margin="4"/>
+            <TextBlock x:Name="BlockMessageInfo" Style="{StaticResource StyleMessageInfo}" Margin="4"/>
         </StackPanel>
         
     </Grid>

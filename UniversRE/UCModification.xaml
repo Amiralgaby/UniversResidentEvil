@@ -34,7 +34,7 @@
             <TextBlock Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" Padding="0,0,15,0"/>
             <CheckBox x:Name="BoxFavoris" HorizontalAlignment="Center" IsChecked="{Binding Favoris,Mode=OneWay}"></CheckBox>
             <Button HorizontalAlignment="Center" Content="Modifier l'élément" Click="Button_Click"/>
-            <TextBlock x:Name="BlockMessageErreur" Style="{StaticResource StyleMessageErreur}" Margin="4"/>
+            <TextBlock x:Name="BlockMessageInfo" Style="{StaticResource StyleMessageInfo}" Margin="4"/>
         </StackPanel>
     </Grid>
 </UserControl>

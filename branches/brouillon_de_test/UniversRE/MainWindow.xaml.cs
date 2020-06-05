@@ -1,6 +1,7 @@
 ﻿using MyLib;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,12 +27,14 @@ namespace UniversRE
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = Man;      
+            DataContext = Man;
+            ContentControl.Content = new UCAccueil();
         }
 
         private void Recherche_TextChanged(object sender, TextChangedEventArgs e)
         {
-            RechercheList = Man.RechercherElementParNom(Recherche.Text);
+            //RechercheList = Man.RechercherElementParNom(Recherche.Text);
+            RechercheList = Man.RechercherElementParNomLINQ(Recherche.Text).ToList();
 
             if (RechercheList.Count != 0)
                 Man.ElementSelectionné = RechercheList[0];
@@ -39,6 +42,7 @@ namespace UniversRE
 
         private void MenuItem_Accueil_Click(object sender, RoutedEventArgs e)
         {
+            Man.ListActuelle = Man.MesElements;
             ContentControl.Content = new UCAccueil();
         }
         private void Histoire_click(object sender, RoutedEventArgs e)
@@ -52,12 +56,24 @@ namespace UniversRE
 
         private void Modifier_click(object sender, RoutedEventArgs e)
         {
+            //if(ContentControl.Content == Content.Equals(UCAccueil)) Man.ElementSelectionné = (Element)Man.EvenementSelectionné;
             ContentControl.Content = new UCModification();
         }
 
         private void Supprimer_click(object sender, RoutedEventArgs e)
         {
             Man.SupprimerElement(Man.ElementSelectionné);
+        }
+
+        private void MenuItem_Favoris_Click(object sender, RoutedEventArgs e)
+        {
+            Man.ListActuelle = Man.MesFavorisLINQ;
+            ContentControl.Content = new UCAccueil();
+        }
+
+        private void MenuItem_Option_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -21,7 +21,6 @@ namespace UniversRE
     public partial class UCAccueil : UserControl
     {
         public Manager Man => (Application.Current as App).LeManager;
-        //public string IsFavoris => (Application.Current as App).LeManager.IsMyElementSelectionnéFavoris;
         public UCAccueil()
         {
             InitializeComponent();

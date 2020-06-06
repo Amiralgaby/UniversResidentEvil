@@ -28,16 +28,15 @@ namespace UniversRE
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            bool isChecked = BoxFavoris.IsChecked ?? false;
-            try
-            {
-                Man.AjouterElement(new Element(BlockNom.Text, BlockDescription.Text, isChecked));
-                AfficheBlockMessageInfo(Brushes.Green, "L'ajout à été effectué avec succès");
-            }
-            catch(Exception excep)
-            {
-                AfficheBlockMessageInfo(Brushes.Red, excep.Message);
-            }            
+            Element ElementAajouter = GetElementAajouter();
+            if (ElementAajouter is null)
+                return;
+            if (BoxFavoris.IsChecked ?? false)
+                ElementAajouter.BasculerFavoris();
+            Man.AjouterElement(ElementAajouter);
+            if(ElementAajouter is Evenement)
+                Man.AjouterEvenementAHistoire(ElementAajouter as Evenement);
+            AfficheBlockMessageInfo(Brushes.Green, "L'ajout à été effectué avec succès");           
         }
 
         private void AfficheBlockMessageInfo(Brush brushes, string message)
@@ -45,6 +44,39 @@ namespace UniversRE
             BlockMessageInfo.Text = message;
             BlockMessageInfo.Background = brushes;
             BlockMessageInfo.Visibility = Visibility.Visible;
+        }
+
+        private Element GetElementAajouter()
+        {
+            Element ElementAajouter = null;
+            string[] séparation = BlockNom.Text.Split(" "); //sépare le nom en deux avec l'espace
+
+            try
+            {
+                if (Personnage.IsChecked ?? false)
+                {
+                    if (séparation.Length < 2)
+                        AfficheBlockMessageInfo(Brushes.Orange, "Merci de donner le nom suvi du prénom du personnage séparer par un espace");
+                    else
+                        ElementAajouter = new Personnage(séparation[0], séparation[1], BlockDescription.Text);
+                }
+                else if (Créature.IsChecked ?? false)
+                {
+                    ElementAajouter = new Creature(BlockNom.Text, BlockDescription.Text, Dangerosité.Sûr);
+                }
+                else //Evenement checked
+                {
+                    if (séparation.Length < 2)
+                        AfficheBlockMessageInfo(Brushes.Orange, "Merci de donner le nom suivi du lieu de l'événement");
+                    else
+                        ElementAajouter = new Evenement(séparation[0], BlockDescription.Text, séparation[1]);
+                }
+            }
+            catch (Exception excep)
+            {
+                AfficheBlockMessageInfo(Brushes.Red, excep.Message);
+            }
+            return ElementAajouter;
         }
     }
 }

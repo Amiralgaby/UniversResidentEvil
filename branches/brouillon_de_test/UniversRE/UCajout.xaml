@@ -23,9 +23,9 @@
             </TextBlock>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Text="Quel type d'élément choississez-vous ?" Style="{StaticResource MaterialDesignBody1TextBlock}" />
-                <RadioButton IsChecked="True" Margin="9">Personnage</RadioButton>
-                <RadioButton Margin="9">Créature</RadioButton>
-                <RadioButton Margin="9">Événement</RadioButton>
+                <RadioButton IsChecked="True" Margin="9" Name="Personnage">Personnage</RadioButton>
+                <RadioButton Margin="9" Name="Créature">Créature</RadioButton>
+                <RadioButton Margin="9" Name="Evénement">Événement</RadioButton>
             </StackPanel>
         </DockPanel>
 
@@ -40,13 +40,11 @@
             </StackPanel>
         </StackPanel>
 
-
         <StackPanel Grid.Row="2" Margin="0,8,0,0" VerticalAlignment="Center">
             <TextBlock Text="Favoris" Style="{StaticResource StyleBlock}" HorizontalAlignment="Center" />
             <CheckBox x:Name="BoxFavoris" HorizontalAlignment="Center" VerticalAlignment="Center" IsChecked="False"></CheckBox>
             <Button HorizontalAlignment="Center" Content="Ajouter Dans La Liste" Click="Button_Click"/>
             <TextBlock x:Name="BlockMessageInfo" Style="{StaticResource StyleMessageInfo}" Margin="4"/>
         </StackPanel>
-        
     </Grid>
 </UserControl>

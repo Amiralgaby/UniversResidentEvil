@@ -35,6 +35,8 @@ namespace UniversRE
 
         private void SourceDeMonImage()
         {
+            if (ReferenceEquals(Man.ElementSelectionné, null))
+                return;
             if (Man.ElementSelectionné.Favoris != false)
                 MonImage.Source = new BitmapImage(new Uri("img/iconeFullstar.png", UriKind.Relative));
             else

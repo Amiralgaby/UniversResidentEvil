@@ -32,11 +32,15 @@ namespace UniversRE
             ContentControl.Content = new UCAccueil();
         }
 
+        /// <summary>
+        /// Intéractivité pour la recherche
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void Recherche_TextChanged(object sender, TextChangedEventArgs e)
         {
             //RechercheList = Man.RechercherElementParNom(Recherche.Text);
             RechercheList = Man.RechercherElementParNomLINQ(Recherche.Text).ToList();
-            Man.ListActuelle = new ObservableCollection<Element>(RechercheList);
             if (RechercheList.Count != 0)
                 Man.ElementSelectionné = RechercheList[0];
         }
@@ -68,6 +72,7 @@ namespace UniversRE
             if (ContentControl.Content is UCHistoire)
                 Man.SupprimerEvenementAHistoire(Man.EvenementSelectionné);
             Man.SupprimerElement(Man.ElementSelectionné);
+            AffichageMessage.AffichageMessageInfo(ref BlockMessage, Brushes.OrangeRed, "Suppression effectué avec succès");
         }
 
         private void MenuItem_Favoris_Click(object sender, RoutedEventArgs e)
@@ -76,9 +81,16 @@ namespace UniversRE
             ContentControl.Content = new UCAccueil();
         }
 
-        private void MenuItem_Option_Click(object sender, RoutedEventArgs e)
+        private void MenuItem_Importer_Click(object sender, RoutedEventArgs e)
         {
+            Man.ChargeLesDonnées();
+            AffichageMessage.AffichageMessageInfo(ref BlockMessage, Brushes.Green, "Importation effectuée");
+        }
 
+        private void MenuItem_Sauvegarder_Click(object sender, RoutedEventArgs e)
+        {
+            Man.SauvegarderLesDonnées();
+            AffichageMessage.AffichageMessageInfo(ref BlockMessage, Brushes.Green, "Sauvegarde effectuée");
         }
     }
 }

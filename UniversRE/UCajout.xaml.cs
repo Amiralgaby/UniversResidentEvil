@@ -32,20 +32,17 @@ namespace UniversRE
             if (ElementAajouter is null)
                 return;
             if (BoxFavoris.IsChecked ?? false)
-                ElementAajouter.BasculerFavoris();
+                Man.BasculerFavoris(ElementAajouter);
             Man.AjouterElement(ElementAajouter);
             if(ElementAajouter is Evenement)
                 Man.AjouterEvenementAHistoire(ElementAajouter as Evenement);
-            AfficheBlockMessageInfo(Brushes.Green, "L'ajout à été effectué avec succès");           
+            AffichageMessage.AffichageMessageInfo(ref BlockMessageInfo, Brushes.Green, "L'ajout à été effectué avec succès");          
         }
 
-        private void AfficheBlockMessageInfo(Brush brushes, string message)
-        {
-            BlockMessageInfo.Text = message;
-            BlockMessageInfo.Background = brushes;
-            BlockMessageInfo.Visibility = Visibility.Visible;
-        }
-
+        /// <summary>
+        /// Construit l'élément selon la demande de l'utilisateur
+        /// </summary>
+        /// <returns>L'élément à ajouter</returns>
         private Element GetElementAajouter()
         {
             Element ElementAajouter = null;
@@ -56,7 +53,7 @@ namespace UniversRE
                 if (Personnage.IsChecked ?? false)
                 {
                     if (séparation.Length < 2)
-                        AfficheBlockMessageInfo(Brushes.Orange, "Merci de donner le nom suvi du prénom du personnage séparer par un espace");
+                        AffichageMessage.AffichageMessageInfo(ref BlockMessageInfo, Brushes.Orange, "Merci de donner le nom suvi du prénom du personnage séparer par un espace");
                     else
                         ElementAajouter = new Personnage(séparation[0], séparation[1], BlockDescription.Text);
                 }
@@ -67,14 +64,14 @@ namespace UniversRE
                 else //Evenement checked
                 {
                     if (séparation.Length < 2)
-                        AfficheBlockMessageInfo(Brushes.Orange, "Merci de donner le nom suivi du lieu de l'événement");
+                        AffichageMessage.AffichageMessageInfo(ref BlockMessageInfo, Brushes.Orange, "Merci de donner le nom suivi du lieu de l'événement");
                     else
                         ElementAajouter = new Evenement(séparation[0], BlockDescription.Text, séparation[1]);
                 }
             }
             catch (Exception excep)
             {
-                AfficheBlockMessageInfo(Brushes.Red, excep.Message);
+                AffichageMessage.AffichageMessageInfo(ref BlockMessageInfo,Brushes.Red, excep.Message);
             }
             return ElementAajouter;
         }

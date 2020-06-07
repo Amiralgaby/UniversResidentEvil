@@ -68,6 +68,10 @@ namespace Stub
             Evenements.Add(e);
             e.BasculerFavoris();
 
+            Evenement e1 = new Evenement("Salut :)", "Description originale", "Paris");
+            Elements.Add(e1);
+            Evenements.Add(e1);
+
             return ((IEnumerable<Element>)Elements, (IEnumerable<Evenement>)Evenements);
         }
 

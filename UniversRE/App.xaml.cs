@@ -18,7 +18,7 @@ namespace UniversRE
 
         public App() : base()
         {
-            LeManager.ChargerLesDonnées();
+            LeManager.ChargeLesDonnées();
         }
     }
 }

@@ -32,19 +32,12 @@ namespace UniversRE
             try
             {
                 Man.ElementSelectionné.ModifierAttribut(BlockNom.Text, BlockDescription.Text, isChecked);
-
-                AfficheBlockMessageInfo(Brushes.Green, "La modification à été effectué avec succès");
+                AffichageMessage.AffichageMessageInfo(ref BlockMessageInfo, Brushes.Green, "La modification à été effectué avec succès");
             }
             catch(Exception excep)
             {
-                AfficheBlockMessageInfo(Brushes.Red, excep.Message);
+                AffichageMessage.AffichageMessageInfo(ref BlockMessageInfo, Brushes.Red, excep.Message);
             }
-        }
-        private void AfficheBlockMessageInfo(Brush brushes, string message)
-        {
-            BlockMessageInfo.Text = message;
-            BlockMessageInfo.Background = brushes;
-            BlockMessageInfo.Visibility = Visibility.Visible;
         }
     }
 }

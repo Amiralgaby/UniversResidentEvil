@@ -12,10 +12,11 @@
             </MenuItem>
             <MenuItem Header="Favoris" Click="MenuItem_Favoris_Click">
             </MenuItem>
-            <MenuItem Header="Options" Click="MenuItem_Option_Click">
-                <MenuItem Header="Importer" />
-                <MenuItem Header="Sauvegarder" />
+            <MenuItem Header="Options">
+                <MenuItem Header="Importer" Click="MenuItem_Importer_Click"/>
+                <MenuItem Header="Sauvegarder" Click="MenuItem_Sauvegarder_Click"/>
             </MenuItem>
+            <TextBlock x:Name="BlockMessage" />
         </Menu>
         <DockPanel DockPanel.Dock="Top" Background="White" x:Name="My_dock_pan">
             <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Background="Beige">

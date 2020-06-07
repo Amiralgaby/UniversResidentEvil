@@ -3,9 +3,11 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Windows;
 using System.Net;
 using System.Text;
 using System.Xml;
+using System.Net.Http.Headers;
 
 namespace MyLib
 {
@@ -14,7 +16,6 @@ namespace MyLib
         private Element elementSelectionné;
         private Evenement evenementSelectionné;
         private int indice = 0;
-        //private string ElementSelectionnéIsFavoris => ElementSelectionné.Favoris != false ? "img/iconeFullstar.png" : "img/iconeEmptystar.png";
         public IPersistanceManager Persistance;
         public List<Evenement> Histoire = new List<Evenement>();
         private ObservableCollection<Element> mesElements = new ObservableCollection<Element>();
@@ -83,8 +84,12 @@ namespace MyLib
             }
         }
 
+        public ObservableCollection<Element> RechercherElementParNomLINQ(string nomAchercher) => new ObservableCollection<Element>(MesElements.Where(e => SimilaritéLevenshtein(e.Nom, nomAchercher) < 4));
         public ObservableCollection<Element> MesFavorisLINQ => new ObservableCollection<Element>(MesElements.Where(e => e.Favoris != false));
         
+        /// <summary>
+        /// Permet de charger les données selon la persistance donnée en paramètres du constructeur
+        /// </summary>
         public void ChargeLesDonnées()
         {
             var données = Persistance.ChargerLesDonnées();
@@ -96,8 +101,13 @@ namespace MyLib
             {
                 Histoire.Add(donnée);
             }
+            ElementSelectionné = MesElements.Count > 0 ? mesElements[0] : null; //Element sélectionné par défaut
+            EvenementSelectionné = Histoire.Count > 0 ? Histoire[0] : null; //Evenement sélectionné par défaut
+            ColletionActuelle = MesElements;
         }
-
+        /// <summary>
+        /// Permet de Sauvegarder les données par rapport à la persitance demandée
+        /// </summary>
         public void SauvegarderLesDonnées()
         {
             Persistance.SauvegarderLesDonnées(mesElements,Histoire);
@@ -147,7 +157,6 @@ namespace MyLib
             return listRetourDeLaRecherche;
         }
 
-        public ObservableCollection<Element> RechercherElementParNomLINQ(string nomAchercher) => new ObservableCollection<Element>(MesElements.Where(e => SimilaritéLevenshtein(e.Nom, nomAchercher) < 4));
         /// <summary>
         /// Fonction permettant de trouver la similarité en "distance" entre 2 string
         /// plus la valeur est petite, plus les deux string se ressemblent
@@ -205,21 +214,6 @@ namespace MyLib
                 }
             }
             return d[d.GetUpperBound(0), d.GetUpperBound(1)];
-        }
-
-        /// <summary>
-        /// Permet de chager les données au début de l'execution du programme
-        /// </summary>
-        public void ChargerLesDonnées()
-        {
-            IEnumerable<Element> sortie1;
-            IEnumerable<Evenement> sortie2;
-           (sortie1,sortie2) = Persistance.ChargerLesDonnées();
-            MesElements = new ObservableCollection<Element>(sortie1);
-            Histoire = sortie2.ToList();
-            ElementSelectionné = MesElements.Count > 0 ? mesElements[0] : null; //Element sélectionné par défaut
-            EvenementSelectionné = Histoire.Count > 0 ? Histoire[0] : null; //Evenement sélectionné par défaut
-            ColletionActuelle = MesElements;
         }
     }
 }

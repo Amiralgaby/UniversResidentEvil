@@ -27,12 +27,20 @@ namespace UniversRE
             SourceDeMonImage();
         }
 
+        /// <summary>
+        /// Executez lors d'un clic sur l'icone favoris afin de basculer l'attribut favoris (True/False)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MonImage_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Man.ElementSelectionné.BasculerFavoris();
-            SourceDeMonImage();
+           Man.BasculerFavoris(Man.ElementSelectionné);
+           SourceDeMonImage();
         }
 
+        /// <summary>
+        /// Donne la source à avoir pour l'image favoris
+        /// </summary>
         private void SourceDeMonImage()
         {
             if (ReferenceEquals(Man.ElementSelectionné, null))

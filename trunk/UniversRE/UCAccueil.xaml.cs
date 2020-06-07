@@ -21,21 +21,30 @@ namespace UniversRE
     public partial class UCAccueil : UserControl
     {
         public Manager Man => (Application.Current as App).LeManager;
-        //public string IsFavoris => (Application.Current as App).LeManager.IsMyElementSelectionnéFavoris;
         public UCAccueil()
         {
             InitializeComponent();
             SourceDeMonImage();
         }
 
+        /// <summary>
+        /// Executez lors d'un clic sur l'icone favoris afin de basculer l'attribut favoris (True/False)
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void MonImage_MouseUp(object sender, MouseButtonEventArgs e)
         {
-            Man.ElementSelectionné.BasculerFavoris();
-            SourceDeMonImage();
+           Man.BasculerFavoris(Man.ElementSelectionné);
+           SourceDeMonImage();
         }
 
+        /// <summary>
+        /// Donne la source à avoir pour l'image favoris
+        /// </summary>
         private void SourceDeMonImage()
         {
+            if (ReferenceEquals(Man.ElementSelectionné, null))
+                return;
             if (Man.ElementSelectionné.Favoris != false)
                 MonImage.Source = new BitmapImage(new Uri("img/iconeFullstar.png", UriKind.Relative));
             else

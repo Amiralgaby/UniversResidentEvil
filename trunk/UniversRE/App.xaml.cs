@@ -14,11 +14,11 @@ namespace UniversRE
     /// </summary>
     public partial class App : Application
     {
-        public Manager LeManager { get; private set; } = new Manager();
+        public Manager LeManager { get; private set; } = new Manager(new Stub.StubDataManager());
 
-        public App()
+        public App() : base()
         {
-            LeManager.ChargerLesDonnées();
+            LeManager.ChargeLesDonnées();
         }
     }
 }

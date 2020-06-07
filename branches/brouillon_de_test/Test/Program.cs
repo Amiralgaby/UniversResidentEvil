@@ -7,7 +7,6 @@ namespace Test
 {
     class Program
     {
-        /*
         static void Main(string[] args)
         {
             Manager m = new Manager( new Stub.StubDataManager());
@@ -67,7 +66,8 @@ namespace Test
             {
                 Console.WriteLine(o);
             }
+
+            ProgramPersistance.MainPers(args);
         }
-        */
     }
 }

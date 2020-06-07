@@ -8,10 +8,10 @@ namespace Test
 {
     class ProgramPersistance
     {
-        static void Main(string[] args)
+        internal static void MainPers(string[] args)
         {
             Manager man = new Manager(new Stub.StubDataManager());
-            man.ChargerLesDonnées();
+            man.ChargeLesDonnées();
             man.Persistance = new DataContractPersistance.DataContractPers();
             man.SauvegarderLesDonnées();
 

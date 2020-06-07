@@ -14,7 +14,7 @@
             </ResourceDictionary.MergedDictionaries>
             <SolidColorBrush Color="BurlyWood" x:Key="ButtonBackgroundColor" />
 
-            <Style TargetType="TextBlock" x:Key="StyleMessageErreur">
+            <Style TargetType="TextBlock" x:Key="StyleMessageInfo">
                 <Setter Property="Visibility" Value="Hidden" />
                 <Setter Property="FontSize" Value="18" />
                 <Setter Property="FontFamily" Value="Arial" />

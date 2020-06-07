@@ -10,10 +10,13 @@
         <Menu DockPanel.Dock="Top" >
             <MenuItem Header="Accueil" Click="MenuItem_Accueil_Click">
             </MenuItem>
-            <MenuItem Header="Options" >
-                <MenuItem Header="Importer" />
-                <MenuItem Header="Sauvegarder" />
+            <MenuItem Header="Favoris" Click="MenuItem_Favoris_Click">
             </MenuItem>
+            <MenuItem Header="Options">
+                <MenuItem Header="Importer" Click="MenuItem_Importer_Click"/>
+                <MenuItem Header="Sauvegarder" Click="MenuItem_Sauvegarder_Click"/>
+            </MenuItem>
+            <TextBlock x:Name="BlockMessage" />
         </Menu>
         <DockPanel DockPanel.Dock="Top" Background="White" x:Name="My_dock_pan">
             <WrapPanel DockPanel.Dock="Top" HorizontalAlignment="Center" VerticalAlignment="Top" Orientation="Horizontal" Background="Beige">
@@ -24,11 +27,7 @@
                 <Image Source="img/loupe-icon.jpg" MaxHeight="40" MaxWidth="40"/>
                 <TextBox x:Name="Recherche" HorizontalAlignment="Center" VerticalAlignment="Center" MinWidth="100" Height="32" FontSize="20" BorderBrush="Aquamarine" TextChanged="Recherche_TextChanged" />
             </WrapPanel>
-            <Grid>
-                <ContentControl x:Name="ContentControl">
-                    <local:UCAccueil/>
-                </ContentControl>
-            </Grid>
+            <ContentControl x:Name="ContentControl" />
         </DockPanel>
     </DockPanel>
 </Window>

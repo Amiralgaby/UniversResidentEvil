@@ -1,7 +1,10 @@
 ﻿using System;
+using System.Runtime.Serialization;
 
 namespace MyLib
 {
+    [KnownType(typeof(Element))]
+    [DataContract]
     public class Element : IEquatable<Element>, IComparable, IComparable<Element>
     {
         private string nom;
@@ -18,6 +21,8 @@ namespace MyLib
 
 
         public void BasculerFavoris() => Favoris = !Favoris;
+        
+        [DataMember]
         public string Nom{
             get => nom;
             private set
@@ -30,6 +35,7 @@ namespace MyLib
             }
         }
         
+        [DataMember]
         public string Description {
             get => description;
             private set 
@@ -41,6 +47,7 @@ namespace MyLib
             }
         }
         
+        [DataMember]
         public bool Favoris { get; private set; }
 
         public void ModifierNom(string nom) => Nom = nom;

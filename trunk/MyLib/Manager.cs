@@ -84,6 +84,12 @@ namespace MyLib
             }
         }
 
+        public string ElementSelectIsFavoris()
+        {
+            if (ElementSelectionné.Favoris)
+                return "img/iconeFullstar.png";
+            return "img/iconeEmptystar.png";
+        }
         public ObservableCollection<Element> RechercherElementParNomLINQ(string nomAchercher) => new ObservableCollection<Element>(MesElements.Where(e => SimilaritéLevenshtein(e.Nom, nomAchercher) < 4));
         public ObservableCollection<Element> MesFavorisLINQ => new ObservableCollection<Element>(MesElements.Where(e => e.Favoris != false));
         

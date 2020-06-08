@@ -20,8 +20,16 @@ namespace MyLib
             Lieu = lieu;
             Date = date;
         }
+        private string lieu;
         [DataMember]
-        public string Lieu { get; private set; }
+        public string Lieu { 
+            get { return lieu; }
+            private set 
+            {
+                lieu = (value ?? "lieu indéterminé");
+            } 
+        }
+
         [DataMember]
         public DateTime Date { get; private set; }
         public void ModifierLieu(string lieu) => Lieu = lieu;

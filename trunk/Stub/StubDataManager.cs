@@ -63,15 +63,30 @@ namespace Stub
                 "D'autres effets secondaires incluent la perte complète de raisonnement — sauf chez certains sujets (qui ne sont toutefois pas en mesure de résister à la nécessité d'obéir à des ordres supérieurs) — et la pleine conformité à l’espèce de Plaga dominante.",
                 Dangerosité.Dangereux));
 
-            Evenement e = new Evenement("Placeholder1", "Sa description", "lieu loin");
+            
+            Evenement e = new Evenement("Création du virus", "Mise au point par James Marcus, Ozwell E. Spencer et Edward Ashford du virus \"précurseur\"", "laboratoire", DateTime.Parse("4/12/1966"));
             Elements.Add(e);
             Evenements.Add(e);
             e.BasculerFavoris();
 
-            Evenement e1 = new Evenement("Salut :)", "Description originale", "Paris");
+            Evenement e1 = new Evenement("Umbrella", "Fondation d'Umbrella par Spencer, Ashford et Marcus. Ce dernier prend la tête du centre de formation afin de pouvoir mener tranquillement, et loin des préoccupations mercantiles de Spencer, des recherches complémentaires sur le virus précurseur.", "lieu indéterminé",DateTime.Parse("1/1/1968"));
             Elements.Add(e1);
             Evenements.Add(e1);
 
+            Evenement[] tabEvenement = new Evenement[6];
+
+            tabEvenement[0] = new Evenement("Virus-T", "James Marcus développe dans son laboratoire des montagnes d'Arklay un dérivé du virus précurseur : Le Virus-T. Il procédera dans les années suivantes des tests sur divers êtres vivants (y compris humains). Les tests opérés sur les sangsues sont particulièrement concluants.", "laboratoire de Marcus",DateTime.Parse("19/09/1978"));
+            tabEvenement[1] = new Evenement("Assassinat de Marcus", "1988 : Spencer commandite l'assassinat de James marcus avec la complicité des anciens élèves de ce dernier, Albert Wesker et William Birkin.", "lieu indeterminé", DateTime.Parse("1/1/1988"));
+            tabEvenement[2] = new Evenement("Condamnation de Coen", "1997: Le lieutenant Billy Coen en mission en Afrique refuse de tuer des civils. Cette désobéissance lui vaudra par la suite d'être interné et condamné.", "Afrique", DateTime.Parse("1/1/1998"));
+            tabEvenement[3] = new Evenement("Fuite du Virus-T", "Une fuite de Virus-T a lieu dans le laboratoire du Manoir d'Arklay (spencer). Celle-ci causera la contamination et la mort de plusieurs chercheurs, notamment celle de John, petit ami d'Ada Wong","laboratoire du Manoir",DateTime.Parse("11/05/1998"));
+            tabEvenement[4] = new Evenement("Disparition étrange", "Les médias de Raccoon City font mention de disparitions étranges dans les environs de la ville", "Raccon city", DateTime.Parse("19/06/1998"));
+            tabEvenement[5] = new Evenement("Tests d'Umbrella", "Le siège d'Umbrella décide de procéder à des tests de leurs Armes biologiques (zombies, ...) en mettant les STARS au contact des monstres au manoir Spencer. A l'issue de ces expériences, umbrella souhaite que le laboratoire caché du manoir soient détruit (en ayant au préalable récupéré des embryons des créatures (hors Tyran).", "Manoir",DateTime.Parse("22/06/1998"));
+            
+            for(int i=0; i<tabEvenement.Length; i++)
+            {
+                Elements.Add(tabEvenement[i]);
+                Evenements.Add(tabEvenement[i]);
+            }
             return ((IEnumerable<Element>)Elements, (IEnumerable<Evenement>)Evenements);
         }
 

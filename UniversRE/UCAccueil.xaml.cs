@@ -21,10 +21,10 @@ namespace UniversRE
     public partial class UCAccueil : UserControl
     {
         public Manager Man => (Application.Current as App).LeManager;
+        public ImageSource Source => new BitmapImage(new Uri((Application.Current as App).LeManager.ElementSelectIsFavoris(), UriKind.Relative));
         public UCAccueil()
         {
             InitializeComponent();
-            SourceDeMonImage();
         }
 
         /// <summary>
@@ -35,20 +35,7 @@ namespace UniversRE
         private void MonImage_MouseUp(object sender, MouseButtonEventArgs e)
         {
            Man.BasculerFavoris(Man.ElementSelectionné);
-           SourceDeMonImage();
-        }
-
-        /// <summary>
-        /// Donne la source à avoir pour l'image favoris
-        /// </summary>
-        private void SourceDeMonImage()
-        {
-            if (ReferenceEquals(Man.ElementSelectionné, null))
-                return;
-            if (Man.ElementSelectionné.Favoris != false)
-                MonImage.Source = new BitmapImage(new Uri("img/iconeFullstar.png", UriKind.Relative));
-            else
-                MonImage.Source = new BitmapImage(new Uri("img/iconeEmptystar.png", UriKind.Relative));
+           MonImage.Source = Source;
         }
     }
 }

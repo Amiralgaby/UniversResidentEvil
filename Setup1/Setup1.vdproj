@@ -15,7 +15,31 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_23127C30AEE748F39425820E39F4E117"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_A68F0BC97A7F4526B834FB71EE912E2F"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_AEE23385B3054FE3921B403CB3F2CC99"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_E240A2D8637842048585AE8A7971FDB7"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_F0370B4D185845F182E25642F15D4C2A"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -116,6 +140,86 @@
         }
         "File"
         {
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_23127C30AEE748F39425820E39F4E117"
+            {
+            "SourcePath" = "8:..\\..\\..\\trunk\\UniversRE\\img\\Ombrella-icon.jpg"
+            "TargetName" = "8:Ombrella-icon.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_496F612E59FD429EAC789C6CCC0900A6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_A68F0BC97A7F4526B834FB71EE912E2F"
+            {
+            "SourcePath" = "8:..\\..\\..\\trunk\\UniversRE\\img\\loupe-icon.jpg"
+            "TargetName" = "8:loupe-icon.jpg"
+            "Tag" = "8:"
+            "Folder" = "8:_496F612E59FD429EAC789C6CCC0900A6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_AEE23385B3054FE3921B403CB3F2CC99"
+            {
+            "SourcePath" = "8:..\\..\\..\\trunk\\UniversRE\\img\\iconeEmptystar.png"
+            "TargetName" = "8:iconeEmptystar.png"
+            "Tag" = "8:"
+            "Folder" = "8:_496F612E59FD429EAC789C6CCC0900A6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_F0370B4D185845F182E25642F15D4C2A"
+            {
+            "SourcePath" = "8:..\\..\\..\\trunk\\UniversRE\\img\\iconeFullstar.png"
+            "TargetName" = "8:iconeFullstar.png"
+            "Tag" = "8:"
+            "Folder" = "8:_496F612E59FD429EAC789C6CCC0900A6"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
         }
         "FileType"
         {
@@ -143,6 +247,17 @@
             "Property" = "8:TARGETDIR"
                 "Folders"
                 {
+                    "{9EF0B969-E518-4E46-987F-47570745A589}:_496F612E59FD429EAC789C6CCC0900A6"
+                    {
+                    "Name" = "8:img"
+                    "AlwaysCreate" = "11:FALSE"
+                    "Condition" = "8:"
+                    "Transitive" = "11:FALSE"
+                    "Property" = "8:_895CA71CA7854A469EF30494C4FC01E9"
+                        "Folders"
+                        {
+                        }
+                    }
                     "{9EF0B969-E518-4E46-987F-47570745A589}:_BA564E99B7A34FB1912F51C4D43084AA"
                     {
                     "Name" = "8:RE"
@@ -184,7 +299,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Univers RE"
         "ProductCode" = "8:{E744C40D-1F7A-4D12-AF4B-62DA82CDBFBD}"
-        "PackageCode" = "8:{91C753D0-0B1D-4659-8C79-8E688F38D17B}"
+        "PackageCode" = "8:{4AF62D04-4B5A-4845-AEE1-77BAB0BDFBA9}"
         "UpgradeCode" = "8:{FAE9BC10-C695-4D09-B4F6-A8A31781F907}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -733,7 +848,7 @@
         {
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_E240A2D8637842048585AE8A7971FDB7"
             {
-            "SourcePath" = "8:..\\UniversRE\\obj\\Debug\\netcoreapp3.1\\UniversRE.exe"
+            "SourcePath" = "8:..\\..\\..\\trunk\\UniversRE\\obj\\Debug\\netcoreapp3.1\\UniversRE.exe"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_35424723BA26490FA7E75BF72743C5C1"

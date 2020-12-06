@@ -8,8 +8,8 @@ Exécutez le setup .msi ou .exe et une fenêtre vous donnera les actions à effe
 Éxécutez le .exe ou le raccourci vers ce dernier
 
 ## Auteurs
-*Cojean Yoan
-*Theuws Gabriel
+* Cojean Yoan
+* Theuws Gabriel
 
 ## License
 Copyright sous les termes de la license GPL
